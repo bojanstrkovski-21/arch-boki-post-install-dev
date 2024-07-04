@@ -88,7 +88,7 @@ choose_desktop() {
 while true; do
     clear
     echo "$ASCII_ART"
-    echo "Choose Desktop
+    echo "                                  Choose Desktop
     "
     echo "                        1. Kde - Plasma
     "
@@ -98,20 +98,21 @@ while true; do
     "
     echo "                        4. Hyprland
     "
-    echo "                        7. Back to Main Menu
+    echo "                        5. Back to Main Menu
     "
-    echo "                        8. Quit Arch-Boki post install
+    echo "                        6. Quit Arch-Boki post install
     "
     echo -n "                         Please choose an option: "
     read update_choice
 
-    case $update_chice in
+    case $update_choice in
         1) kde_plasma ;;
         2) xfce ;;
         3) cinnamon ;;
         4) hyprland ;;
-        7) return ;;
-        8) exit ;;
+        5) return ;;
+        6) exit ;;
+        *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
     esac
 done
 

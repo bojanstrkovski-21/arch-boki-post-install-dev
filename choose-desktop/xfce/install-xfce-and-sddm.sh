@@ -16,11 +16,10 @@ arch-boki-viper-grub-theme-main \
 arc-gtk-theme \
 arc-icon-theme \
 papirus-icon-theme \
-dracula-themes-meta \
 bibata-cursor-theme-bin \
 archboki-xfce-git \
 xfce4-panel-profiles \
 xfce4-docklike-plugin \
 
 
-enable sddm.service -f
+enable sddm.service --now
