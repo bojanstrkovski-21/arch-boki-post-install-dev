@@ -98,6 +98,10 @@ while true; do
     "
     echo "                        4. Hyprland
     "
+    echo "                        7. Back to Main Menu
+    "
+    echo "                        8. Quit Arch-Boki post install
+    "
     echo -n "                         Please choose an option: "
     read update_choice
 
@@ -106,6 +110,8 @@ while true; do
         2) xfce ;;
         3) cinnamon ;;
         4) hyprland ;;
+        7) return ;;
+        8) exit ;;
     esac
 done
 
