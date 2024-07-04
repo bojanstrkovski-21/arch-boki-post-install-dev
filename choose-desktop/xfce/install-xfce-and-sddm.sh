@@ -8,6 +8,7 @@ xfce4-screensaver \
 mugshot \
 accountsservice \
 sddm \
+sddm-conf \
 arcolinux-wallpapers-git \
 archlinux-logout-git \
 a-candy-beauty-icon-theme-git \
@@ -19,7 +20,7 @@ papirus-icon-theme \
 bibata-cursor-theme-bin \
 archboki-xfce-git \
 xfce4-panel-profiles \
-xfce4-docklike-plugin \
+xfce4-docklike-plugin
 
 
-enable sddm.service --now
+sudo systemctl enable sddm.service --now

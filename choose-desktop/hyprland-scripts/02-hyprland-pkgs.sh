@@ -18,7 +18,7 @@ playerctl \
 polkit-gnome \
 python-requests \
 python-pyquery \
-qt5ct \
+qt6 \
 qt6ct \
 qt6-svg \
 rofi-wayland \

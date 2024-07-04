@@ -21,6 +21,10 @@ gparted \
 alacritty \
 alacritty-themes \
 kitty \
+kitty-shell-integration \
+libsixel \
+lsix \
+imagemagick \
 code \
 xed \
 geany \

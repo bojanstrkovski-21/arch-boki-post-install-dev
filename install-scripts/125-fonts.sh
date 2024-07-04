@@ -77,6 +77,9 @@ ttf-roboto-mono \
 ttf-ubuntu-font-family
 
 
+sudo fc-cache -f -v
+
+
 
 
 

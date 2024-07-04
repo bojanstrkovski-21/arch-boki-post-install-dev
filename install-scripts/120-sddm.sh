@@ -3,5 +3,6 @@
 
 sudo pacman -S --noconfirm --needed sddm
 sudo pacman -S --noconfirm --needed arch-boki-viper-grub-theme
+sudo pacman -S --noconfirm --needed sddm-conf
 
-enable sddm.service -f
+sudo systemctl enable sddm.service --now

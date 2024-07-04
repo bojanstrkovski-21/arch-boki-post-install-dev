@@ -14,6 +14,7 @@ xed \
 mugshot \
 accountsservice \
 sddm \
+sddm-conf \
 arcolinux-wallpapers-git \
 archlinux-logout-git \
 a-candy-beauty-icon-theme-git \
@@ -22,5 +23,7 @@ arch-boki-viper-grub-theme-main \
 arc-gtk-theme \
 arc-icon-theme \
 papirus-icon-theme \
-dracula-themes-meta \
 bibata-cursor-theme-bin
+
+
+sudo systemctl enable sddm.service --now

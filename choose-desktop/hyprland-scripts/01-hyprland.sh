@@ -4,5 +4,5 @@ sudo pacman -S --needed --noconfirm \
 hyprland \
 hyprpaper \
 hyprlock \
-#wlogout \
+wlogout \
 waybar \

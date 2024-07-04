@@ -1,19 +1,14 @@
 #!/usr/bin/env bash
-# qownnotes \
+# qownnotes 
 # pycharmcomunity 
-# gpick \
+# gpick 
 # tilix
 # gpick
-# brave
-# libreoffice \
+# brave-bin
+# libreoffice 
 
 sudo pacman -S --needed --noconfirm \
 neovim \
-thunar \
-file-roller \
-thunar-shares-plugin \
-nemo \
-nemo-fileroller \
 obsidian \
 sublime-text-4 \
 celluloid \
@@ -22,11 +17,16 @@ vlc \
 rhythmbox \
 firefox \
 chromium \
+brave-bin \
 gnome-disk-utility \
 gparted \
 alacritty \
 alacritty-themes \
 kitty \
+kitty-shell-integration \
+libsixel \
+lsix \
+imagemagick \
 code \
 xed \
 geany \

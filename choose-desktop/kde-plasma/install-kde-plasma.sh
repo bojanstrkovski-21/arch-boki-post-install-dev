@@ -2,7 +2,8 @@
 
 sudo pacman  -S --needed --noconfirm \
 plasma \
-sddm
+sddm \
+sddm-conf \
 
 ### Kf6 group
     
@@ -58,7 +59,8 @@ kwidgetsaddons
 
 ### Qt6 gropoup (all)
 sudo pacman  -S --needed --noconfirm \
-qt6
+qt6 \
+kvantum
 
 ### Kde-network group
 
@@ -93,8 +95,8 @@ spectacle
 
 ### kde-multimedia
 
-sudo pacman  -S --needed --noconfirm \
-kdenlive  
+#sudo pacman  -S --needed --noconfirm \
+#kdenlive  
 
 
 ### kde-utilities
