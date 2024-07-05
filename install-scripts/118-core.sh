@@ -31,6 +31,7 @@ expect \
 extra-cmake-modules \
 eza \
 fwupd \
+fzf \
 git \
 glibc \
 gcc \
