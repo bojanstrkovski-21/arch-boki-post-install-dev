@@ -5,8 +5,15 @@ neovim \
 thunar \
 file-roller \
 thunar-share-plugin \
+thunar-archive-plugin-git \
+thunar-volman \
+tumbler \
 nemo \
 nemo-file-roler \
+nemo-share \
+nemo-image-converter \
+nemo-preview \
+nemo-compare \
 obsidian \
 sublime-text-4 \
 celluloid \
