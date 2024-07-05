@@ -33,6 +33,7 @@ eza \
 fwupd \
 git \
 glibc \
+gcc \
 hardinfo \
 hwdata \
 hwdetect \
