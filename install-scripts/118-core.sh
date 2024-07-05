@@ -47,6 +47,7 @@ linux-headers \
 logrotate \
 lsb-release \
 make \
+mkinitcpio-firmware \
 openssl \
 os-prober \
 p7zip \
