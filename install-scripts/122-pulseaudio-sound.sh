@@ -17,12 +17,18 @@ sudo pacman -S --noconfirm --needed pacutils
 sudo pacinstall --resolve-conflicts=all --no-confirm \
 pulseaudio \
 pulseaudio-alsa \
+pulseaudio-bluetooth \
+pulseaudio-equalizer \
+pulseaudio-jack \
+pulseaudio-zeroconf \
 pavucontrol \
+alsa-utils \
+alsa-plugins \
 alsa-firmware \
 alsa-lib \
-alsa-plugins \
-alsa-utils \
+alsa-topology-conf \
 gstreamer \
+gst-libav \
 gst-plugins-good \
 gst-plugins-bad \
 gst-plugins-base \

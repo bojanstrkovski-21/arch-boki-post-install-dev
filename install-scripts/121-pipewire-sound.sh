@@ -22,6 +22,7 @@ alsa-utils \
 alsa-firmware \
 alsa-plugins \
 alsa-lib \
+alsa-topology-conf \
 gstreamer \
 gst-libav \
 gst-plugins-bad \
@@ -45,9 +46,12 @@ x264 \
 xvidcore \
 pavucontrol \
 pipewire \
+pipewire-audio \
+pipewire-docs \
 pipewire-pulse \
 pipewire-alsa \
 pipewire-jack \
 pipewire-zeroconf \
 playerctl \
-volumeicon
+volumeicon \
+wireplumber
