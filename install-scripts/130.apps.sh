@@ -9,7 +9,7 @@ thunar-archive-plugin \
 thunar-volman \
 tumbler \
 nemo \
-nemo-file-roller \
+nemo-fileroller \
 nemo-share \
 nemo-image-converter \
 nemo-preview \
