@@ -69,8 +69,6 @@ ttf-jetbrains-mono \
 ttf-joypixels \
 ttf-lato \
 ttf-liberation \
-ttf-linux-libertine \
-ttf-linux-libertine-g \
 ttf-proggyclean-nerd \
 ttf-roboto \
 ttf-roboto-mono \

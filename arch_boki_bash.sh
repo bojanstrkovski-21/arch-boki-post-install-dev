@@ -337,6 +337,13 @@ core-utils() {
     read -p "Press Enter to continue..."
 }
 
+printer-drivers() {
+    clear
+    echo "$ASCII_ART"
+    echo "Installing fonts..."
+    ./install-scripts/124-printers.sh
+    read -p "Press Enter to continue..."
+}
 
 # Main loop
 while true; do

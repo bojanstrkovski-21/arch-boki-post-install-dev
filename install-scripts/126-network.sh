@@ -1,7 +1,9 @@
 #!/usr/bin/bash
 
+# removing conflicting pkgs
+sudo pacman -Rdd iptables-nft
 
-
+# installing network pakgs
 sudo pacman -S --needed --noconfirm \
 avahi \
 ethtool \
