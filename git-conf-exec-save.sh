@@ -18,7 +18,7 @@ git config --add hooks.pre-push 'chmod +x choose-desktop/hyprland-scripts/01-hyp
 git config --add hooks.pre-push 'chmod +x choose-desktop/hyprland-scripts/02-hyprland-pkgs.sh'
 git config --add hooks.pre-push 'chmod +x choose-desktop/hyprland-scripts/03-yay.sh'
 git config --add hooks.pre-push 'chmod +x choose-desktop/hyprland-scripts/04-paru.sh'
-git config --add hooks.pre-push 'chmod +x choose-desktop/hyprland-scripts/130-apps.sh'
+git config --add hooks.pre-push 'chmod +x choose-desktop/hyprland-scripts/130.apps.sh'
 git config --add hooks.pre-push 'chmod +x choose-desktop/kde-plasma/install-kde-plasma.sh'
 git config --add hooks.pre-push 'chmod +x choose-desktop/xfce/install-xfce-and-sddm.sh'
 git config --add hooks.pre-push 'chmod +x core-utils/audio-drivers.sh'
