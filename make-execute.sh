@@ -13,6 +13,7 @@
 
 chmod +x arch_boki_bash.sh
 chmod +x make-execute.sh
+chmod +x git-conf-exec-save.sh
 chmod +x add-repos/append_archboki_repo.sh
 chmod +x add-repos/fix-pacman-databases-and-keys.sh
 chmod +x add-repos/get-the-arcolinux-keys-and-repos.sh
