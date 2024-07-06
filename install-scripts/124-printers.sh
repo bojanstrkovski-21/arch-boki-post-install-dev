@@ -12,7 +12,6 @@ ghostscript \
 gsfonts \
 gutenprint \
 foomatic-db-gutenprint-ppds \
-gtk3-print-backends \
 libcups \
 system-config-printer
 
