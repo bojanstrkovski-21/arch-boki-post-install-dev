@@ -4,12 +4,12 @@ sudo pacman -S --needed --noconfirm \
 neovim \
 thunar \
 file-roller \
-thunar-share-plugin \
-thunar-archive-plugin-git \
+thunar-shares-plugin \
+thunar-archive-plugin \
 thunar-volman \
 tumbler \
 nemo \
-nemo-file-roler \
+nemo-file-roller \
 nemo-share \
 nemo-image-converter \
 nemo-preview \
@@ -23,7 +23,7 @@ rhythmbox \
 firefox \
 brave \
 chromium \
-gnome-disks \
+gnome-disk-utility \
 gparted \
 alacritty \
 alacritty-themes \
@@ -44,7 +44,7 @@ kodi \
 meld \
 libreoffice \
 okular \
-pycharmcomunity \
+pycharm-community-edition \
 qownnotes \
 rofi-wayland \
 tilix \
