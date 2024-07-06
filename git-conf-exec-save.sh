@@ -78,20 +78,3 @@ git pull && file install-scripts/129-theming.sh | grep -q "executable" || echo "
 git pull && file install-scripts/130.apps.sh | grep -q "executable" || echo "Script not executable"
 git pull && file install-scripts/131-install-flatpaks.sh | grep -q "executable" || echo "Script not executable"
 git pull && file install-scripts/133-logout.sh | grep -q "executable" || echo "Script not executable"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
