@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 ## Plasma group
 
 sudo pacman  -S --needed --noconfirm \
