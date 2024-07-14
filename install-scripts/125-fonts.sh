@@ -26,7 +26,7 @@ ttf-hack-nerd \
 ttf-hactor \
 ttf-ibmplex-mono-nerd \
 ttf-inconsolata-go-nerd \
-ttf-inconsolata-lgs-nerd \
+ttf-inconsolata-lgc-nerd \
 ttf-inconsolata-nerd \
 ttf-iosevka-nerd \
 ttf-iosevkaterm-nerd \
