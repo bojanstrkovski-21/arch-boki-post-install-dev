@@ -11,4 +11,6 @@ pkg-config \
 libxcb \
 xcb-util-wm \
 wlroots \
-xorg-xwayland
+xorg-xwayland \
+neovim \
+sublime-text-4

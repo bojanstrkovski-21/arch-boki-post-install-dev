@@ -10,6 +10,8 @@ xfce4-terminal \
 iso-flag-png \
 mintlocale \
 nemo-fileroller \
+neovim \
+sublime-text-4 \
 xed \
 mugshot \
 accountsservice \

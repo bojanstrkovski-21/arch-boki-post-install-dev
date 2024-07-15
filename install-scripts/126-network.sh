@@ -1,14 +1,14 @@
 #!/usr/bin/bash
 
 # removing conflicting pkgs
-sudo pacman -Rdd iptables-nft
+sudo pacman -Rdd iptables
 
 # installing network pakgs
 sudo pacman -S --needed --noconfirm \
+iptables-nft \
 avahi \
 ethtool \
 gnome-nettool \
-iptables-nft \
 net-tools \
 netctl \
 networkmanager \

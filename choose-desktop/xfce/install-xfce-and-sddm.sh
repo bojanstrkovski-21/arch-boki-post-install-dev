@@ -9,6 +9,9 @@ mugshot \
 accountsservice \
 sddm \
 sddm-conf \
+neovim \
+sublime-text-4 \
+xed \
 arcolinux-wallpapers-git \
 archlinux-logout-git \
 a-candy-beauty-icon-theme-git \

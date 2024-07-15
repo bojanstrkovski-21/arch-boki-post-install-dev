@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+## Core-utils-apps
+sudo pacman  -S --needed --noconfirm \
+neovim \
+sublime-text-4 \
+xed
+
 ## Plasma group
 
 sudo pacman  -S --needed --noconfirm \
