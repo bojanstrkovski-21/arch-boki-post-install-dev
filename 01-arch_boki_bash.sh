@@ -62,7 +62,7 @@ update_and_refresh() {
         "
         echo "                        6. Fix pacman_db_and_keys
         "
-        echo "                        7. Install ArchLinux TweakTool(add repos first!)
+        echo "                        7. Install ArcoLinux Apps (add repos first!)
         "
         echo "                        8. Back to Main Menu
         "
@@ -78,7 +78,7 @@ update_and_refresh() {
             4) add_arco_linux_repos ;;
             5) add_chaotic_linux_repos ;;
             6) fix-pacman-db-and-keys ;;
-            7) install_archlinux_tweaktool ;;
+            7) install_arcolinux_apps.sh ;;
             8) return ;;
             9) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
