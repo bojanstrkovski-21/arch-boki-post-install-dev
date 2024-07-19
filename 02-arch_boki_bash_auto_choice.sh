@@ -222,11 +222,11 @@ fix-pacman-db-and-keys() {
     read -p "Press Enter to continue..."
 }
 
-install_archlinux_tweaktool() {
+install_arcolinux_apps.sh() {
     clear
     echo "$ASCII_ART"
     echo "Installing ArchLinux TweakTool..."
-    ./add-repos/install_archlinux_tweaktool.sh
+    ./add-repos/install_arcolinux_apps.sh
     # Add your code to add repos here
     read -p "Press Enter to continue..."
 }
