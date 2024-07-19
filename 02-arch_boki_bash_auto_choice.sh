@@ -61,9 +61,11 @@ update_and_refresh() {
         "
         echo "                        6. Fix pacman_db_and_keys
         "
-        echo "                        7. Back to Main Menu
+        echo "                        7. Install ArchLinux TweakTool
         "
-        echo "                        8. Quit Arch-Boki post install
+        echo "                        8. Back to Main Menu
+        "
+        echo "                        9. Quit Arch-Boki post install
         "
         read -n 1 -p "                    Please choose an option: " update_choice
 
