@@ -78,7 +78,7 @@ update_and_refresh() {
             4) add_arco_linux_repos ;;
             5) add_chaotic_linux_repos ;;
             6) fix-pacman-db-and-keys ;;
-            7) install_archlinux_tweaktool
+            7) install_archlinux_tweaktool ;;
             8) return ;;
             9) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
