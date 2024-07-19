@@ -61,7 +61,7 @@ update_and_refresh() {
         "
         echo "                        6. Fix pacman_db_and_keys
         "
-        echo "                        7. Install ArchLinux TweakTool
+        echo "                        7. Install ArchLinux TweakTool(add repos first!)
         "
         echo "                        8. Back to Main Menu
         "
@@ -218,6 +218,15 @@ fix-pacman-db-and-keys() {
     echo "$ASCII_ART"
     echo "Fixing pacman-db_and_keys..."
     ./add-repos/fix-pacman-databases-and-keys.sh
+    # Add your code to add repos here
+    read -p "Press Enter to continue..."
+}
+
+install_archlinux_tweaktool() {
+    clear
+    echo "$ASCII_ART"
+    echo "Installing ArchLinux TweakTool..."
+    ./add-repos/install_archlinux_tweaktool.sh
     # Add your code to add repos here
     read -p "Press Enter to continue..."
 }
