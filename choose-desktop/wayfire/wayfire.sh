@@ -4,7 +4,7 @@ sudo pacman -S --needed --noconfirm \
 cairo \
 pango \
 freetype2 \
-lixft \
+libxft \
 glm \
 libdrm \
 libevdev \
@@ -15,7 +15,7 @@ libpng \
 libxkbcommon \
 libxml2 \
 pixman \
-pkg-conf \
+pkg-config \
 wayland \
 wayland-protocols \
 wlroots \
@@ -25,10 +25,11 @@ libglvnd \
 mesa \
 libxcb \
 libxcomposite \
-librender \
+libxrender \
 libxfixes \
 libx11 \
 xorg-xinput \
+xorg-xwayland \
 feh \
 alacritty \
 foot \
