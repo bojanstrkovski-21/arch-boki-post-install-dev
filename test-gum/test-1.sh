@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+sudo pacman -S --needed --noconfirm gum figlet
+
 figlet -f big "ArchBoki"
 
 main_menu=$( gum choose "Update & Refresh" "Choose Desktop" "Install Core utils_drivers" "Install Apps" )
