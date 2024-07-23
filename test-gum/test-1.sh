@@ -22,7 +22,7 @@ elif [ "${update_refresh}" = "Add arch-boki-repos" ]; then
 	echo -e "\n[shtrkce_repo_xl]\nSigLevel = Optional TrustAll\nServer = https://gitlab.com/bojanstrkovski-21/\$repo/-/raw/main/\$arch\n" | sudo tee -a /etc/pacman.conf
 	sudo pacman -Syy
 
-elif [ "${update_refresh}" = "Add ArcoLinux_repos" ]; then
+elif [ "${update_refresh}" = "Add arch-boki Repos" ]; then
 
 	sudo pacman -Sy
 	sudo pacman -S wget --noconfirm --needed
