@@ -17,64 +17,93 @@ clear
 gum style --align center --margin="0 0 0 0" "$ASCII_ART"
 
 # Function to display the main menu
-main_menu() {
-    echo ""
-    gum style --align center --margin="0 50 0 5" "Main Menu"
-    echo ""
-    gum style --align center --margin="0 50 0 5" "1. Update and Refresh"
-    gum style --align center --margin="0 50 0 5" "2. Choose Desktop"
-    gum style --align center --margin="0 50 0 5" "3. Install Core Utils and Drivers"
-    gum style --align center --margin="0 50 0 5" "4. Install Apps"
-    gum style --align center --margin="0 50 0 5" "5. Quit Arch-Boki post install"
-    echo ""
-    gum style --align center --margin="0 50 0 5" --foreground 212 "Please choose an option: "
-    read main_choice
 
-    case $main_choice in
-        1) update_and_refresh ;;
-        2) choose_desktop ;;
-        3) install_core_utils ;;
-        4) install_apps ;;
-        5) exit 0 ;;
-        *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
-    esac
+main_menu() {
+    while true; do
+        
+        # Display the menu options centered using gum choose
+      main_choice=$( gum choose --cursor="-> " --cursor.align="center" --cursor.margin="0 0 0 80" --cursor.foreground="#d3c6aa" --header.faint --header="$(gum style --align center --margin="0 50 0 90" --padding="0 0 2 0" 'Main Menu')" \
+                          "$(gum style --align center --faint "Update and Refresh")" \
+                          "$(gum style --align center "Choose Desktop")" \
+                          "$(gum style --align center "Install Core Utils and Drivers")" \
+                          "$(gum style --align center "Install Apps")" \
+                          "$(gum style --align center "Quit Arch-Boki post install")")
+
+        # Handle the user's choice
+        case $main_choice in
+            "Update and Refresh") update_and_refresh ;;
+            "Choose Desktop") choose_desktop ;;
+            "Install Core Utils and Drivers") install_core_utils ;;
+            "Install Apps") install_apps ;;
+            "Quit Arch-Boki post install") exit 0 ;;
+        esac
+    done
 }
 
 # Function for "Update and Refresh" submenu
 update_and_refresh() {
     while true; do
-        clear
-        gum style --align center "$ASCII_ART"
         echo ""
-        gum style --align center "Update and Refresh"
-        echo ""
-        gum style --align center "1. Refresh Mirrors"
-        gum style --align center "2. Update System"
-        gum style --align center "3. Add arch-boki Repos"
-        gum style --align center "4. Add ArcoLinux_repos"
-        gum style --align center "5. Add Chaotic_repos"
-        gum style --align center "6. Fix pacman_db_and_keys"
-        gum style --align center "7. Install ArcoLinux Apps (add repos first!)"
-        gum style --align center "8. Back to Main Menu"
-        gum style --align center "9. Quit Arch-Boki post install"
-        echo ""
-        gum style --align center --foreground 212 "Please choose an option: "
-        read update_choice
+        main_choice=$(gum choose --cursor="-> " --cursor.align="center" --cursor.margin="0 0 0 80" --cursor.foreground="#d3c6aa" --header.faint --header="$(gum style --align center --margin="0 50 0 90" --padding="0 0 2 0" 'Update and Refresh')" \
+            "$(gum style --align center "Refresh Mirrors")" \
+            "$(gum style --align center "Update System")" \
+            "$(gum style --align center "Add arch-boki Repos")" \
+            "$(gum style --align center "Add ArcoLinux_repos")" \
+            "$(gum style --align center "Add Chaotic_repos")" \
+            "$(gum style --align center "Fix pacman_db_and_keys")" \
+            "$(gum style --align center "Install ArcoLinux Apps (add repos first!)")" \
+            "$(gum style --align center "Back to Main Menu")" \
+            "$(gum style --align center "Quit Arch-Boki post install")")
 
-        case $update_choice in
-            1) refresh_mirrors_db ;;
-            2) update_system ;;
-            3) add_arch_boki_repos ;;
-            4) add_arco_linux_repos ;;
-            5) add_chaotic_linux_repos ;;
-            6) fix-pacman-db-and-keys ;;
-            7) install_arcolinux_apps.sh ;;
-            8) return ;;
-            9) exit ;;
+        case $main_choice in
+            "Refresh Mirrors") sudo pacman -Syy ;;
+            "Update System") update_system ;;
+            "Add arch-boki Repos") add_arch_boki_repos ;;
+            "Add ArcoLinux_repos") add_arco_linux_repos ;;
+            "Add Chaotic_repos") add_chaotic_linux_repos ;;
+            "Fix pacman_db_and_keys") fix-pacman-db-and-keys ;;
+            "Install ArcoLinux Apps (add repos first!)") install_arcolinux_apps.sh ;;
+            "Back to Main Menu") return 0 ;;
+            "Quit Arch-Boki post install") exit 0 ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
     done
 }
+
+# update_and_refresh() {
+#     while true; do
+#         clear
+#         gum style --align center --margin="0 50 0 60"  "$ASCII_ART"
+#         echo ""
+#         gum style --align center --margin="0 50 0 90" --padding="0 0 2 0" "Update and Refresh"
+#         echo ""
+#         gum style --align center "1. Refresh Mirrors"
+#         gum style --align center "2. Update System"
+#         gum style --align center "3. Add arch-boki Repos"
+#         gum style --align center "4. Add ArcoLinux_repos"
+#         gum style --align center "5. Add Chaotic_repos"
+#         gum style --align center "6. Fix pacman_db_and_keys"
+#         gum style --align center "7. Install ArcoLinux Apps (add repos first!)"
+#         gum style --align center "8. Back to Main Menu"
+#         gum style --align center "9. Quit Arch-Boki post install"
+#         echo ""
+#         gum style --align center --foreground 212 "Please choose an option: "
+#         read update_choice
+
+#         case $update_choice in
+#             1) refresh_mirrors_db ;;
+#             2) update_system ;;
+#             3) add_arch_boki_repos ;;
+#             4) add_arco_linux_repos ;;
+#             5) add_chaotic_linux_repos ;;
+#             6) fix-pacman-db-and-keys ;;
+#             7) install_arcolinux_apps.sh ;;
+#             8) return ;;
+#             9) exit ;;
+#             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
+#         esac
+#     done
+# }
 
 # Function for "Choose Desktop"
 choose_desktop() {
@@ -160,7 +189,8 @@ refresh_mirrors_db() {
     clear
     gum style --align center "$ASCII_ART"
     gum style --align center "Refreshing Mirrors..."
-    ./add-repos/upd_servers.sh
+    #./add-repos/upd_servers.sh
+    sudo pacman -Syy
     read -p "Press Enter to continue..."
 }
 

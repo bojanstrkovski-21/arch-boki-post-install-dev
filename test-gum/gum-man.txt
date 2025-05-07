@@ -1,0 +1,2809 @@
+GUM(1)                       A tool for glamorous shell scripts.                       GUM(1)
+
+NAME
+       gum - A tool for glamorous shell scripts.
+
+SYNOPSIS
+       gum [options...] [argument...]
+
+DESCRIPTION
+OPTIONS
+       -h, --help
+              Show context-sensitive help.
+
+       -v, --version
+              Print the version number
+
+COMMANDS
+       choose [<options> ...] [flags]
+           Choose an option from a list of choices
+
+       OPTIONS
+           --cursor-prefix="• " Prefix to show on the cursor item (hidden if limit is 1)
+
+           --cursor.align="left"
+                  Text Alignment
+
+           --cursor.background=""
+                  Background Color
+
+           --cursor.bold
+                  Bold text
+
+           --cursor.border-background=""
+                  Border Background Color
+
+           --cursor.border-foreground=""
+                  Border Foreground Color
+
+           --cursor.border="none"
+                  Border Style
+
+           --cursor.faint
+                  Faint text
+
+           --cursor.foreground="212"
+                  Foreground Color
+
+           --cursor.height=0
+                  Text height
+
+           --cursor.italic
+                  Italicize text
+
+           --cursor.margin="0 0"
+                  Text margin
+
+           --cursor.padding="0 0"
+                  Text padding
+
+           --cursor.strikethrough
+                  Strikethrough text
+
+           --cursor.underline
+                  Underline text
+
+           --cursor.width=0
+                  Text width
+
+           --cursor="> "
+                  Prefix to show on item that corresponds to the cursor position
+
+           --header.align="left"
+                  Text Alignment
+
+           --header.background=""
+                  Background Color
+
+           --header.bold
+                  Bold text
+
+           --header.border-background=""
+                  Border Background Color
+
+           --header.border-foreground=""
+                  Border Foreground Color
+
+           --header.border="none"
+                  Border Style
+
+           --header.faint
+                  Faint text
+
+           --header.foreground="99"
+                  Foreground Color
+
+           --header.height=0
+                  Text height
+
+           --header.italic
+                  Italicize text
+
+           --header.margin="0 0"
+                  Text margin
+
+           --header.padding="0 0"
+                  Text padding
+
+           --header.strikethrough
+                  Strikethrough text
+
+           --header.underline
+                  Underline text
+
+           --header.width=0
+                  Text width
+
+           --header="Choose:"
+                  Header value
+
+           --height=10
+                  Height of the list
+
+           --item.align="left"
+                  Text Alignment
+
+           --item.background=""
+                  Background Color
+
+           --item.bold
+                  Bold text
+
+           --item.border-background=""
+                  Border Background Color
+
+           --item.border-foreground=""
+                  Border Foreground Color
+
+           --item.border="none"
+                  Border Style
+
+           --item.faint
+                  Faint text
+
+           --item.foreground=""
+                  Foreground Color
+
+           --item.height=0
+                  Text height
+
+           --item.italic
+                  Italicize text
+
+           --item.margin="0 0"
+                  Text margin
+
+           --item.padding="0 0"
+                  Text padding
+
+           --item.strikethrough
+                  Strikethrough text
+
+           --item.underline
+                  Underline text
+
+           --item.width=0
+                  Text width
+
+           --limit=1
+                  Maximum number of options to pick
+
+           --no-limit
+                  Pick unlimited number of options (ignores limit)
+
+           --ordered
+                  Maintain the order of the selected options
+
+           --select-if-one
+                  Select the given option if there is only one
+
+           --selected-prefix="✓ "
+                  Prefix to show on selected items (hidden if limit is 1)
+
+           --selected.align="left"
+                  Text Alignment
+
+           --selected.background=""
+                  Background Color
+
+           --selected.bold
+                  Bold text
+
+           --selected.border-background=""
+                  Border Background Color
+
+           --selected.border-foreground=""
+                  Border Foreground Color
+
+           --selected.border="none"
+                  Border Style
+
+           --selected.faint
+                  Faint text
+
+           --selected.foreground="212"
+                  Foreground Color
+
+           --selected.height=0
+                  Text height
+
+           --selected.italic
+                  Italicize text
+
+           --selected.margin="0 0"
+                  Text margin
+
+           --selected.padding="0 0"
+                  Text padding
+
+           --selected.strikethrough
+                  Strikethrough text
+
+           --selected.underline
+                  Underline text
+
+           --selected.width=0
+                  Text width
+
+           --selected=,...
+                  Options that should start as selected
+
+           --show-help
+                  Show help keybinds
+
+           --timeout=0
+                  Timeout until choose returns selected element
+
+           --unselected-prefix="• "
+                  Prefix to show on unselected items (hidden if limit is 1)
+
+       confirm [<prompt>] [flags]
+           Ask a user to confirm an action
+
+       OPTIONS
+           --affirmative="Yes" The title of the affirmative action
+
+           --default
+                  Default confirmation action
+
+           --negative="No"
+                  The title of the negative action
+
+           --prompt.align="left"
+                  Text Alignment
+
+           --prompt.background=""
+                  Background Color
+
+           --prompt.bold
+                  Bold text
+
+           --prompt.border-background=""
+                  Border Background Color
+
+           --prompt.border-foreground=""
+                  Border Foreground Color
+
+           --prompt.border="none"
+                  Border Style
+
+           --prompt.faint
+                  Faint text
+
+           --prompt.foreground="#7571F9"
+                  Foreground Color
+
+           --prompt.height=0
+                  Text height
+
+           --prompt.italic
+                  Italicize text
+
+           --prompt.margin="0 0 0 1"
+                  Text margin
+
+           --prompt.padding="0 0"
+                  Text padding
+
+           --prompt.strikethrough
+                  Strikethrough text
+
+           --prompt.underline
+                  Underline text
+
+           --prompt.width=0
+                  Text width
+
+           --selected.align="left"
+                  Text Alignment
+
+           --selected.background="212"
+                  Background Color
+
+           --selected.bold
+                  Bold text
+
+           --selected.border-background=""
+                  Border Background Color
+
+           --selected.border-foreground=""
+                  Border Foreground Color
+
+           --selected.border="none"
+                  Border Style
+
+           --selected.faint
+                  Faint text
+
+           --selected.foreground="230"
+                  Foreground Color
+
+           --selected.height=0
+                  Text height
+
+           --selected.italic
+                  Italicize text
+
+           --selected.margin="0 1"
+                  Text margin
+
+           --selected.padding="0 3"
+                  Text padding
+
+           --selected.strikethrough
+                  Strikethrough text
+
+           --selected.underline
+                  Underline text
+
+           --selected.width=0
+                  Text width
+
+           --show-help
+                  Show help key binds
+
+           --timeout=0
+                  Timeout until confirm returns selected value or default if provided
+
+           --unselected.align="left"
+                  Text Alignment
+
+           --unselected.background="235"
+                  Background Color
+
+           --unselected.bold
+                  Bold text
+
+           --unselected.border-background=""
+                  Border Background Color
+
+           --unselected.border-foreground=""
+                  Border Foreground Color
+
+           --unselected.border="none"
+                  Border Style
+
+           --unselected.faint
+                  Faint text
+
+           --unselected.foreground="254"
+                  Foreground Color
+
+           --unselected.height=0
+                  Text height
+
+           --unselected.italic
+                  Italicize text
+
+           --unselected.margin="0 1"
+                  Text margin
+
+           --unselected.padding="0 3"
+                  Text padding
+
+           --unselected.strikethrough
+                  Strikethrough text
+
+           --unselected.underline
+                  Underline text
+
+           --unselected.width=0
+                  Text width
+
+       file [<path>] [flags]
+           Pick a file from a folder
+
+       OPTIONS
+           -a, --all Show hidden and 'dot' files
+
+           --cursor.align="left"
+                  Text Alignment
+
+           --cursor.background=""
+                  Background Color
+
+           --cursor.bold
+                  Bold text
+
+           --cursor.border-background=""
+                  Border Background Color
+
+           --cursor.border-foreground=""
+                  Border Foreground Color
+
+           --cursor.border="none"
+                  Border Style
+
+           --cursor.faint
+                  Faint text
+
+           --cursor.foreground="212"
+                  Foreground Color
+
+           --cursor.height=0
+                  Text height
+
+           --cursor.italic
+                  Italicize text
+
+           --cursor.margin="0 0"
+                  Text margin
+
+           --cursor.padding="0 0"
+                  Text padding
+
+           --cursor.strikethrough
+                  Strikethrough text
+
+           --cursor.underline
+                  Underline text
+
+           --cursor.width=0
+                  Text width
+
+           -c, --cursor=">"
+                  The cursor character
+
+           --directory
+                  Allow directories selection
+
+           --directory.align="left"
+                  Text Alignment
+
+           --directory.background=""
+                  Background Color
+
+           --directory.bold
+                  Bold text
+
+           --directory.border-background=""
+                  Border Background Color
+
+           --directory.border-foreground=""
+                  Border Foreground Color
+
+           --directory.border="none"
+                  Border Style
+
+           --directory.faint
+                  Faint text
+
+           --directory.foreground="99"
+                  Foreground Color
+
+           --directory.height=0
+                  Text height
+
+           --directory.italic
+                  Italicize text
+
+           --directory.margin="0 0"
+                  Text margin
+
+           --directory.padding="0 0"
+                  Text padding
+
+           --directory.strikethrough
+                  Strikethrough text
+
+           --directory.underline
+                  Underline text
+
+           --directory.width=0
+                  Text width
+
+           --file Allow files selection
+
+           --file-size.align="right"
+                  Text Alignment
+
+           --file-size.background=""
+                  Background Color
+
+           --file-size.bold
+                  Bold text
+
+           --file-size.border-background=""
+                  Border Background Color
+
+           --file-size.border-foreground=""
+                  Border Foreground Color
+
+           --file-size.border="none"
+                  Border Style
+
+           --file-size.faint
+                  Faint text
+
+           --file-size.foreground="240"
+                  Foreground Color
+
+           --file-size.height=0
+                  Text height
+
+           --file-size.italic
+                  Italicize text
+
+           --file-size.margin="0 0"
+                  Text margin
+
+           --file-size.padding="0 0"
+                  Text padding
+
+           --file-size.strikethrough
+                  Strikethrough text
+
+           --file-size.underline
+                  Underline text
+
+           --file-size.width=8
+                  Text width
+
+           --file.align="left"
+                  Text Alignment
+
+           --file.background=""
+                  Background Color
+
+           --file.bold
+                  Bold text
+
+           --file.border-background=""
+                  Border Background Color
+
+           --file.border-foreground=""
+                  Border Foreground Color
+
+           --file.border="none"
+                  Border Style
+
+           --file.faint
+                  Faint text
+
+           --file.foreground=""
+                  Foreground Color
+
+           --file.height=0
+                  Text height
+
+           --file.italic
+                  Italicize text
+
+           --file.margin="0 0"
+                  Text margin
+
+           --file.padding="0 0"
+                  Text padding
+
+           --file.strikethrough
+                  Strikethrough text
+
+           --file.underline
+                  Underline text
+
+           --file.width=0
+                  Text width
+
+           --height=10
+                  Maximum number of files to display
+
+           --permissions.align="left"
+                  Text Alignment
+
+           --permissions.background=""
+                  Background Color
+
+           --permissions.bold
+                  Bold text
+
+           --permissions.border-background=""
+                  Border Background Color
+
+           --permissions.border-foreground=""
+                  Border Foreground Color
+
+           --permissions.border="none"
+                  Border Style
+
+           --permissions.faint
+                  Faint text
+
+           --permissions.foreground="244"
+                  Foreground Color
+
+           --permissions.height=0
+                  Text height
+
+           --permissions.italic
+                  Italicize text
+
+           --permissions.margin="0 0"
+                  Text margin
+
+           --permissions.padding="0 0"
+                  Text padding
+
+           --permissions.strikethrough
+                  Strikethrough text
+
+           --permissions.underline
+                  Underline text
+
+           --permissions.width=0
+                  Text width
+
+           --selected.align="left"
+                  Text Alignment
+
+           --selected.background=""
+                  Background Color
+
+           --selected.bold
+                  Bold text
+
+           --selected.border-background=""
+                  Border Background Color
+
+           --selected.border-foreground=""
+                  Border Foreground Color
+
+           --selected.border="none"
+                  Border Style
+
+           --selected.faint
+                  Faint text
+
+           --selected.foreground="212"
+                  Foreground Color
+
+           --selected.height=0
+                  Text height
+
+           --selected.italic
+                  Italicize text
+
+           --selected.margin="0 0"
+                  Text margin
+
+           --selected.padding="0 0"
+                  Text padding
+
+           --selected.strikethrough
+                  Strikethrough text
+
+           --selected.underline
+                  Underline text
+
+           --selected.width=0
+                  Text width
+
+           --show-help
+                  Show help key binds
+
+           --symlink.align="left"
+                  Text Alignment
+
+           --symlink.background=""
+                  Background Color
+
+           --symlink.bold
+                  Bold text
+
+           --symlink.border-background=""
+                  Border Background Color
+
+           --symlink.border-foreground=""
+                  Border Foreground Color
+
+           --symlink.border="none"
+                  Border Style
+
+           --symlink.faint
+                  Faint text
+
+           --symlink.foreground="36"
+                  Foreground Color
+
+           --symlink.height=0
+                  Text height
+
+           --symlink.italic
+                  Italicize text
+
+           --symlink.margin="0 0"
+                  Text margin
+
+           --symlink.padding="0 0"
+                  Text padding
+
+           --symlink.strikethrough
+                  Strikethrough text
+
+           --symlink.underline
+                  Underline text
+
+           --symlink.width=0
+                  Text width
+
+           --timeout=0
+                  Timeout until command aborts without a selection
+
+       filter [<options> ...] [flags]
+           Filter items from a list
+
+       OPTIONS
+           --cursor-text.align="left" Text Alignment
+
+           --cursor-text.background=""
+                  Background Color
+
+           --cursor-text.bold
+                  Bold text
+
+           --cursor-text.border-background=""
+                  Border Background Color
+
+           --cursor-text.border-foreground=""
+                  Border Foreground Color
+
+           --cursor-text.border="none"
+                  Border Style
+
+           --cursor-text.faint
+                  Faint text
+
+           --cursor-text.foreground=""
+                  Foreground Color
+
+           --cursor-text.height=0
+                  Text height
+
+           --cursor-text.italic
+                  Italicize text
+
+           --cursor-text.margin="0 0"
+                  Text margin
+
+           --cursor-text.padding="0 0"
+                  Text padding
+
+           --cursor-text.strikethrough
+                  Strikethrough text
+
+           --cursor-text.underline
+                  Underline text
+
+           --cursor-text.width=0
+                  Text width
+
+           --fuzzy
+                  Enable fuzzy matching
+
+           --header.align="left"
+                  Text Alignment
+
+           --header.background=""
+                  Background Color
+
+           --header.bold
+                  Bold text
+
+           --header.border-background=""
+                  Border Background Color
+
+           --header.border-foreground=""
+                  Border Foreground Color
+
+           --header.border="none"
+                  Border Style
+
+           --header.faint
+                  Faint text
+
+           --header.foreground="240"
+                  Foreground Color
+
+           --header.height=0
+                  Text height
+
+           --header.italic
+                  Italicize text
+
+           --header.margin="0 0"
+                  Text margin
+
+           --header.padding="0 0"
+                  Text padding
+
+           --header.strikethrough
+                  Strikethrough text
+
+           --header.underline
+                  Underline text
+
+           --header.width=0
+                  Text width
+
+           --header=""
+                  Header value
+
+           --height=0
+                  Input height
+
+           --indicator.align="left"
+                  Text Alignment
+
+           --indicator.background=""
+                  Background Color
+
+           --indicator.bold
+                  Bold text
+
+           --indicator.border-background=""
+                  Border Background Color
+
+           --indicator.border-foreground=""
+                  Border Foreground Color
+
+           --indicator.border="none"
+                  Border Style
+
+           --indicator.faint
+                  Faint text
+
+           --indicator.foreground="212"
+                  Foreground Color
+
+           --indicator.height=0
+                  Text height
+
+           --indicator.italic
+                  Italicize text
+
+           --indicator.margin="0 0"
+                  Text margin
+
+           --indicator.padding="0 0"
+                  Text padding
+
+           --indicator.strikethrough
+                  Strikethrough text
+
+           --indicator.underline
+                  Underline text
+
+           --indicator.width=0
+                  Text width
+
+           --indicator="•"
+                  Character for selection
+
+           --limit=1
+                  Maximum number of options to pick
+
+           --match.align="left"
+                  Text Alignment
+
+           --match.background=""
+                  Background Color
+
+           --match.bold
+                  Bold text
+
+           --match.border-background=""
+                  Border Background Color
+
+           --match.border-foreground=""
+                  Border Foreground Color
+
+           --match.border="none"
+                  Border Style
+
+           --match.faint
+                  Faint text
+
+           --match.foreground="212"
+                  Foreground Color
+
+           --match.height=0
+                  Text height
+
+           --match.italic
+                  Italicize text
+
+           --match.margin="0 0"
+                  Text margin
+
+           --match.padding="0 0"
+                  Text padding
+
+           --match.strikethrough
+                  Strikethrough text
+
+           --match.underline
+                  Underline text
+
+           --match.width=0
+                  Text width
+
+           --no-limit
+                  Pick unlimited number of options (ignores limit)
+
+           --placeholder.align="left"
+                  Text Alignment
+
+           --placeholder.background=""
+                  Background Color
+
+           --placeholder.bold
+                  Bold text
+
+           --placeholder.border-background=""
+                  Border Background Color
+
+           --placeholder.border-foreground=""
+                  Border Foreground Color
+
+           --placeholder.border="none"
+                  Border Style
+
+           --placeholder.faint
+                  Faint text
+
+           --placeholder.foreground="240"
+                  Foreground Color
+
+           --placeholder.height=0
+                  Text height
+
+           --placeholder.italic
+                  Italicize text
+
+           --placeholder.margin="0 0"
+                  Text margin
+
+           --placeholder.padding="0 0"
+                  Text padding
+
+           --placeholder.strikethrough
+                  Strikethrough text
+
+           --placeholder.underline
+                  Underline text
+
+           --placeholder.width=0
+                  Text width
+
+           --placeholder="Filter..."
+                  Placeholder value
+
+           --prompt.align="left"
+                  Text Alignment
+
+           --prompt.background=""
+                  Background Color
+
+           --prompt.bold
+                  Bold text
+
+           --prompt.border-background=""
+                  Border Background Color
+
+           --prompt.border-foreground=""
+                  Border Foreground Color
+
+           --prompt.border="none"
+                  Border Style
+
+           --prompt.faint
+                  Faint text
+
+           --prompt.foreground="240"
+                  Foreground Color
+
+           --prompt.height=0
+                  Text height
+
+           --prompt.italic
+                  Italicize text
+
+           --prompt.margin="0 0"
+                  Text margin
+
+           --prompt.padding="0 0"
+                  Text padding
+
+           --prompt.strikethrough
+                  Strikethrough text
+
+           --prompt.underline
+                  Underline text
+
+           --prompt.width=0
+                  Text width
+
+           --prompt="> "
+                  Prompt to display
+
+           --reverse
+                  Display from the bottom of the screen
+
+           --select-if-one
+                  Select the given option if there is only one
+
+           --selected-indicator.align="left"
+                  Text Alignment
+
+           --selected-indicator.background=""
+                  Background Color
+
+           --selected-indicator.bold
+                  Bold text
+
+           --selected-indicator.border-background=""
+                  Border Background Color
+
+           --selected-indicator.border-foreground=""
+                  Border Foreground Color
+
+           --selected-indicator.border="none"
+                  Border Style
+
+           --selected-indicator.faint
+                  Faint text
+
+           --selected-indicator.foreground="212"
+                  Foreground Color
+
+           --selected-indicator.height=0
+                  Text height
+
+           --selected-indicator.italic
+                  Italicize text
+
+           --selected-indicator.margin="0 0"
+                  Text margin
+
+           --selected-indicator.padding="0 0"
+                  Text padding
+
+           --selected-indicator.strikethrough
+                  Strikethrough text
+
+           --selected-indicator.underline
+                  Underline text
+
+           --selected-indicator.width=0
+                  Text width
+
+           --selected-prefix=" ◉ "
+                  Character to indicate selected items (hidden if limit is 1)
+
+           --sort Sort the results
+
+           --strict
+                  Only returns if anything matched. Otherwise return Filter
+
+           --text.align="left"
+                  Text Alignment
+
+           --text.background=""
+                  Background Color
+
+           --text.bold
+                  Bold text
+
+           --text.border-background=""
+                  Border Background Color
+
+           --text.border-foreground=""
+                  Border Foreground Color
+
+           --text.border="none"
+                  Border Style
+
+           --text.faint
+                  Faint text
+
+           --text.foreground=""
+                  Foreground Color
+
+           --text.height=0
+                  Text height
+
+           --text.italic
+                  Italicize text
+
+           --text.margin="0 0"
+                  Text margin
+
+           --text.padding="0 0"
+                  Text padding
+
+           --text.strikethrough
+                  Strikethrough text
+
+           --text.underline
+                  Underline text
+
+           --text.width=0
+                  Text width
+
+           --timeout=0
+                  Timeout until filter command aborts
+
+           --unselected-prefix.align="left"
+                  Text Alignment
+
+           --unselected-prefix.background=""
+                  Background Color
+
+           --unselected-prefix.bold
+                  Bold text
+
+           --unselected-prefix.border-background=""
+                  Border Background Color
+
+           --unselected-prefix.border-foreground=""
+                  Border Foreground Color
+
+           --unselected-prefix.border="none"
+                  Border Style
+
+           --unselected-prefix.faint
+                  Faint text
+
+           --unselected-prefix.foreground="240"
+                  Foreground Color
+
+           --unselected-prefix.height=0
+                  Text height
+
+           --unselected-prefix.italic
+                  Italicize text
+
+           --unselected-prefix.margin="0 0"
+                  Text margin
+
+           --unselected-prefix.padding="0 0"
+                  Text padding
+
+           --unselected-prefix.strikethrough
+                  Strikethrough text
+
+           --unselected-prefix.underline
+                  Underline text
+
+           --unselected-prefix.width=0
+                  Text width
+
+           --unselected-prefix=" ○ "
+                  Character to indicate unselected items (hidden if limit is 1)
+
+           --value=""
+                  Initial filter value
+
+           --width=20
+                  Input width
+
+       format [<template> ...] [flags]
+           Format a string using a template
+
+       OPTIONS
+           -l, --language="" Programming language to parse code
+
+           --theme="pink"
+                  Glamour theme to use for markdown formatting
+
+           -t, --type="markdown"
+                  Format to use (markdown,template,code,emoji)
+
+       input [flags]
+           Prompt for some input
+
+       OPTIONS
+           --char-limit=400 Maximum value length (0 for no limit)
+
+           --cursor.align="left"
+                  Text Alignment
+
+           --cursor.background=""
+                  Background Color
+
+           --cursor.bold
+                  Bold text
+
+           --cursor.border-background=""
+                  Border Background Color
+
+           --cursor.border-foreground=""
+                  Border Foreground Color
+
+           --cursor.border="none"
+                  Border Style
+
+           --cursor.faint
+                  Faint text
+
+           --cursor.foreground="212"
+                  Foreground Color
+
+           --cursor.height=0
+                  Text height
+
+           --cursor.italic
+                  Italicize text
+
+           --cursor.margin="0 0"
+                  Text margin
+
+           --cursor.mode="blink"
+                  Cursor mode
+
+           --cursor.padding="0 0"
+                  Text padding
+
+           --cursor.strikethrough
+                  Strikethrough text
+
+           --cursor.underline
+                  Underline text
+
+           --cursor.width=0
+                  Text width
+
+           --header.align="left"
+                  Text Alignment
+
+           --header.background=""
+                  Background Color
+
+           --header.bold
+                  Bold text
+
+           --header.border-background=""
+                  Border Background Color
+
+           --header.border-foreground=""
+                  Border Foreground Color
+
+           --header.border="none"
+                  Border Style
+
+           --header.faint
+                  Faint text
+
+           --header.foreground="240"
+                  Foreground Color
+
+           --header.height=0
+                  Text height
+
+           --header.italic
+                  Italicize text
+
+           --header.margin="0 0"
+                  Text margin
+
+           --header.padding="0 0"
+                  Text padding
+
+           --header.strikethrough
+                  Strikethrough text
+
+           --header.underline
+                  Underline text
+
+           --header.width=0
+                  Text width
+
+           --header=""
+                  Header value
+
+           --password
+                  Mask input characters
+
+           --placeholder.align="left"
+                  Text Alignment
+
+           --placeholder.background=""
+                  Background Color
+
+           --placeholder.bold
+                  Bold text
+
+           --placeholder.border-background=""
+                  Border Background Color
+
+           --placeholder.border-foreground=""
+                  Border Foreground Color
+
+           --placeholder.border="none"
+                  Border Style
+
+           --placeholder.faint
+                  Faint text
+
+           --placeholder.foreground="240"
+                  Foreground Color
+
+           --placeholder.height=0
+                  Text height
+
+           --placeholder.italic
+                  Italicize text
+
+           --placeholder.margin="0 0"
+                  Text margin
+
+           --placeholder.padding="0 0"
+                  Text padding
+
+           --placeholder.strikethrough
+                  Strikethrough text
+
+           --placeholder.underline
+                  Underline text
+
+           --placeholder.width=0
+                  Text width
+
+           --placeholder="Type something..."
+                  Placeholder value
+
+           --prompt.align="left"
+                  Text Alignment
+
+           --prompt.background=""
+                  Background Color
+
+           --prompt.bold
+                  Bold text
+
+           --prompt.border-background=""
+                  Border Background Color
+
+           --prompt.border-foreground=""
+                  Border Foreground Color
+
+           --prompt.border="none"
+                  Border Style
+
+           --prompt.faint
+                  Faint text
+
+           --prompt.foreground=""
+                  Foreground Color
+
+           --prompt.height=0
+                  Text height
+
+           --prompt.italic
+                  Italicize text
+
+           --prompt.margin="0 0"
+                  Text margin
+
+           --prompt.padding="0 0"
+                  Text padding
+
+           --prompt.strikethrough
+                  Strikethrough text
+
+           --prompt.underline
+                  Underline text
+
+           --prompt.width=0
+                  Text width
+
+           --prompt="> "
+                  Prompt to display
+
+           --show-help
+                  Show help keybinds
+
+           --timeout=0
+                  Timeout until input aborts
+
+           --value=""
+                  Initial value (can also be passed via stdin)
+
+           --width=40
+                  Input width (0 for terminal width)
+
+       join <text> ... [flags]
+           Join text vertically or horizontally
+
+       OPTIONS
+           --align="left" Text alignment
+
+           --horizontal
+                  Join (potentially multi-line) strings horizontally
+
+           --vertical
+                  Join (potentially multi-line) strings vertically
+
+       log <text> ... [flags]
+           Log messages to output
+
+       OPTIONS
+           -o, --file=STRING Log to file
+
+           -f, --format
+                  Format message using printf
+
+           --formatter="text"
+                  The log formatter to use
+
+           --key.align="left"
+                  Text Alignment
+
+           --key.background=""
+                  Background Color
+
+           --key.bold
+                  Bold text
+
+           --key.border-background=""
+                  Border Background Color
+
+           --key.border-foreground=""
+                  Border Foreground Color
+
+           --key.border="none"
+                  Border Style
+
+           --key.faint
+                  Faint text
+
+           --key.foreground=""
+                  Foreground Color
+
+           --key.height=0
+                  Text height
+
+           --key.italic
+                  Italicize text
+
+           --key.margin="0 0"
+                  Text margin
+
+           --key.padding="0 0"
+                  Text padding
+
+           --key.strikethrough
+                  Strikethrough text
+
+           --key.underline
+                  Underline text
+
+           --key.width=0
+                  Text width
+
+           --level.align="left"
+                  Text Alignment
+
+           --level.background=""
+                  Background Color
+
+           --level.bold
+                  Bold text
+
+           --level.border-background=""
+                  Border Background Color
+
+           --level.border-foreground=""
+                  Border Foreground Color
+
+           --level.border="none"
+                  Border Style
+
+           --level.faint
+                  Faint text
+
+           --level.foreground=""
+                  Foreground Color
+
+           --level.height=0
+                  Text height
+
+           --level.italic
+                  Italicize text
+
+           --level.margin="0 0"
+                  Text margin
+
+           --level.padding="0 0"
+                  Text padding
+
+           --level.strikethrough
+                  Strikethrough text
+
+           --level.underline
+                  Underline text
+
+           --level.width=0
+                  Text width
+
+           -l, --level="none"
+                  The log level to use
+
+           --message.align="left"
+                  Text Alignment
+
+           --message.background=""
+                  Background Color
+
+           --message.bold
+                  Bold text
+
+           --message.border-background=""
+                  Border Background Color
+
+           --message.border-foreground=""
+                  Border Foreground Color
+
+           --message.border="none"
+                  Border Style
+
+           --message.faint
+                  Faint text
+
+           --message.foreground=""
+                  Foreground Color
+
+           --message.height=0
+                  Text height
+
+           --message.italic
+                  Italicize text
+
+           --message.margin="0 0"
+                  Text margin
+
+           --message.padding="0 0"
+                  Text padding
+
+           --message.strikethrough
+                  Strikethrough text
+
+           --message.underline
+                  Underline text
+
+           --message.width=0
+                  Text width
+
+           --prefix.align="left"
+                  Text Alignment
+
+           --prefix.background=""
+                  Background Color
+
+           --prefix.bold
+                  Bold text
+
+           --prefix.border-background=""
+                  Border Background Color
+
+           --prefix.border-foreground=""
+                  Border Foreground Color
+
+           --prefix.border="none"
+                  Border Style
+
+           --prefix.faint
+                  Faint text
+
+           --prefix.foreground=""
+                  Foreground Color
+
+           --prefix.height=0
+                  Text height
+
+           --prefix.italic
+                  Italicize text
+
+           --prefix.margin="0 0"
+                  Text margin
+
+           --prefix.padding="0 0"
+                  Text padding
+
+           --prefix.strikethrough
+                  Strikethrough text
+
+           --prefix.underline
+                  Underline text
+
+           --prefix.width=0
+                  Text width
+
+           --prefix=STRING
+                  Prefix to print before the message
+
+           --separator.align="left"
+                  Text Alignment
+
+           --separator.background=""
+                  Background Color
+
+           --separator.bold
+                  Bold text
+
+           --separator.border-background=""
+                  Border Background Color
+
+           --separator.border-foreground=""
+                  Border Foreground Color
+
+           --separator.border="none"
+                  Border Style
+
+           --separator.faint
+                  Faint text
+
+           --separator.foreground=""
+                  Foreground Color
+
+           --separator.height=0
+                  Text height
+
+           --separator.italic
+                  Italicize text
+
+           --separator.margin="0 0"
+                  Text margin
+
+           --separator.padding="0 0"
+                  Text padding
+
+           --separator.strikethrough
+                  Strikethrough text
+
+           --separator.underline
+                  Underline text
+
+           --separator.width=0
+                  Text width
+
+           -s, --structured
+                  Use structured logging
+
+           --time.align="left"
+                  Text Alignment
+
+           --time.background=""
+                  Background Color
+
+           --time.bold
+                  Bold text
+
+           --time.border-background=""
+                  Border Background Color
+
+           --time.border-foreground=""
+                  Border Foreground Color
+
+           --time.border="none"
+                  Border Style
+
+           --time.faint
+                  Faint text
+
+           --time.foreground=""
+                  Foreground Color
+
+           --time.height=0
+                  Text height
+
+           --time.italic
+                  Italicize text
+
+           --time.margin="0 0"
+                  Text margin
+
+           --time.padding="0 0"
+                  Text padding
+
+           --time.strikethrough
+                  Strikethrough text
+
+           --time.underline
+                  Underline text
+
+           --time.width=0
+                  Text width
+
+           -t, --time=""
+                  The time format to use (kitchen, layout, ansic, rfc822, etc...)
+
+           --value.align="left"
+                  Text Alignment
+
+           --value.background=""
+                  Background Color
+
+           --value.bold
+                  Bold text
+
+           --value.border-background=""
+                  Border Background Color
+
+           --value.border-foreground=""
+                  Border Foreground Color
+
+           --value.border="none"
+                  Border Style
+
+           --value.faint
+                  Faint text
+
+           --value.foreground=""
+                  Foreground Color
+
+           --value.height=0
+                  Text height
+
+           --value.italic
+                  Italicize text
+
+           --value.margin="0 0"
+                  Text margin
+
+           --value.padding="0 0"
+                  Text padding
+
+           --value.strikethrough
+                  Strikethrough text
+
+           --value.underline
+                  Underline text
+
+           --value.width=0
+                  Text width
+
+       pager [<content>] [flags]
+           Scroll through a file
+
+       OPTIONS
+           --align="left" Text Alignment
+
+           --background=""
+                  Background Color
+
+           --bold Bold text
+
+           --border-background=""
+                  Border Background Color
+
+           --border-foreground="212"
+                  Border Foreground Color
+
+           --border="rounded"
+                  Border Style
+
+           --faint
+                  Faint text
+
+           --foreground=""
+                  Foreground Color
+
+           --height=0
+                  Text height
+
+           --help.align="left"
+                  Text Alignment
+
+           --help.background=""
+                  Background Color
+
+           --help.bold
+                  Bold text
+
+           --help.border-background=""
+                  Border Background Color
+
+           --help.border-foreground=""
+                  Border Foreground Color
+
+           --help.border="none"
+                  Border Style
+
+           --help.faint
+                  Faint text
+
+           --help.foreground="241"
+                  Foreground Color
+
+           --help.height=0
+                  Text height
+
+           --help.italic
+                  Italicize text
+
+           --help.margin="0 0"
+                  Text margin
+
+           --help.padding="0 0"
+                  Text padding
+
+           --help.strikethrough
+                  Strikethrough text
+
+           --help.underline
+                  Underline text
+
+           --help.width=0
+                  Text width
+
+           --italic
+                  Italicize text
+
+           --line-number.align="left"
+                  Text Alignment
+
+           --line-number.background=""
+                  Background Color
+
+           --line-number.bold
+                  Bold text
+
+           --line-number.border-background=""
+                  Border Background Color
+
+           --line-number.border-foreground=""
+                  Border Foreground Color
+
+           --line-number.border="none"
+                  Border Style
+
+           --line-number.faint
+                  Faint text
+
+           --line-number.foreground="237"
+                  Foreground Color
+
+           --line-number.height=0
+                  Text height
+
+           --line-number.italic
+                  Italicize text
+
+           --line-number.margin="0 0"
+                  Text margin
+
+           --line-number.padding="0 0"
+                  Text padding
+
+           --line-number.strikethrough
+                  Strikethrough text
+
+           --line-number.underline
+                  Underline text
+
+           --line-number.width=0
+                  Text width
+
+           --margin="0 0"
+                  Text margin
+
+           --match-highlight.align="left"
+                  Text Alignment
+
+           --match-highlight.background="225"
+                  Background Color
+
+           --match-highlight.bold
+                  Bold text
+
+           --match-highlight.border-background=""
+                  Border Background Color
+
+           --match-highlight.border-foreground=""
+                  Border Foreground Color
+
+           --match-highlight.border="none"
+                  Border Style
+
+           --match-highlight.faint
+                  Faint text
+
+           --match-highlight.foreground="235"
+                  Foreground Color
+
+           --match-highlight.height=0
+                  Text height
+
+           --match-highlight.italic
+                  Italicize text
+
+           --match-highlight.margin="0 0"
+                  Text margin
+
+           --match-highlight.padding="0 0"
+                  Text padding
+
+           --match-highlight.strikethrough
+                  Strikethrough text
+
+           --match-highlight.underline
+                  Underline text
+
+           --match-highlight.width=0
+                  Text width
+
+           --match.align="left"
+                  Text Alignment
+
+           --match.background=""
+                  Background Color
+
+           --match.bold
+                  Bold text
+
+           --match.border-background=""
+                  Border Background Color
+
+           --match.border-foreground=""
+                  Border Foreground Color
+
+           --match.border="none"
+                  Border Style
+
+           --match.faint
+                  Faint text
+
+           --match.foreground="212"
+                  Foreground Color
+
+           --match.height=0
+                  Text height
+
+           --match.italic
+                  Italicize text
+
+           --match.margin="0 0"
+                  Text margin
+
+           --match.padding="0 0"
+                  Text padding
+
+           --match.strikethrough
+                  Strikethrough text
+
+           --match.underline
+                  Underline text
+
+           --match.width=0
+                  Text width
+
+           --padding="0 1"
+                  Text padding
+
+           --show-line-numbers
+                  Show line numbers
+
+           --soft-wrap
+                  Soft wrap lines
+
+           --strikethrough
+                  Strikethrough text
+
+           --timeout=0
+                  Timeout until command exits
+
+           --underline
+                  Underline text
+
+           --width=0
+                  Text width
+
+       spin <command> ... [flags]
+           Display spinner while running a command
+
+       OPTIONS
+           -a, --align="left" Alignment of spinner with regard to the title
+
+           --show-error
+                  Show output of command only if the command fails
+
+           --show-output
+                  Show or pipe output of command during execution
+
+           --spinner.align="left"
+                  Text Alignment
+
+           --spinner.background=""
+                  Background Color
+
+           --spinner.bold
+                  Bold text
+
+           --spinner.border-background=""
+                  Border Background Color
+
+           --spinner.border-foreground=""
+                  Border Foreground Color
+
+           --spinner.border="none"
+                  Border Style
+
+           --spinner.faint
+                  Faint text
+
+           --spinner.foreground="212"
+                  Foreground Color
+
+           --spinner.height=0
+                  Text height
+
+           --spinner.italic
+                  Italicize text
+
+           --spinner.margin="0 0"
+                  Text margin
+
+           --spinner.padding="0 0"
+                  Text padding
+
+           --spinner.strikethrough
+                  Strikethrough text
+
+           --spinner.underline
+                  Underline text
+
+           --spinner.width=0
+                  Text width
+
+           -s, --spinner="dot"
+                  Spinner type
+
+           --timeout=0
+                  Timeout until spin command aborts
+
+           --title.align="left"
+                  Text Alignment
+
+           --title.background=""
+                  Background Color
+
+           --title.bold
+                  Bold text
+
+           --title.border-background=""
+                  Border Background Color
+
+           --title.border-foreground=""
+                  Border Foreground Color
+
+           --title.border="none"
+                  Border Style
+
+           --title.faint
+                  Faint text
+
+           --title.foreground=""
+                  Foreground Color
+
+           --title.height=0
+                  Text height
+
+           --title.italic
+                  Italicize text
+
+           --title.margin="0 0"
+                  Text margin
+
+           --title.padding="0 0"
+                  Text padding
+
+           --title.strikethrough
+                  Strikethrough text
+
+           --title.underline
+                  Underline text
+
+           --title.width=0
+                  Text width
+
+           --title="Loading..."
+                  Text to display to user while spinning
+
+       style [<text> ...] [flags]
+           Apply coloring, borders, spacing to text
+
+       OPTIONS
+           --align="left" Text Alignment
+
+           --background=""
+                  Background Color
+
+           --bold Bold text
+
+           --border-background=""
+                  Border Background Color
+
+           --border-foreground=""
+                  Border Foreground Color
+
+           --border="none"
+                  Border Style
+
+           --faint
+                  Faint text
+
+           --foreground=""
+                  Foreground Color
+
+           --height=0
+                  Text height
+
+           --italic
+                  Italicize text
+
+           --margin="0 0"
+                  Text margin
+
+           --padding="0 0"
+                  Text padding
+
+           --strikethrough
+                  Strikethrough text
+
+           --underline
+                  Underline text
+
+           --width=0
+                  Text width
+
+       table [flags]
+           Render a table of data
+
+       OPTIONS
+           --border.align="left" Text Alignment
+
+           --border.background=""
+                  Background Color
+
+           --border.bold
+                  Bold text
+
+           --border.border-background=""
+                  Border Background Color
+
+           --border.border-foreground=""
+                  Border Foreground Color
+
+           --border.border="none"
+                  Border Style
+
+           --border.faint
+                  Faint text
+
+           --border.foreground=""
+                  Foreground Color
+
+           --border.height=0
+                  Text height
+
+           --border.italic
+                  Italicize text
+
+           --border.margin="0 0"
+                  Text margin
+
+           --border.padding="0 0"
+                  Text padding
+
+           --border.strikethrough
+                  Strikethrough text
+
+           --border.underline
+                  Underline text
+
+           --border.width=0
+                  Text width
+
+           -b, --border="rounded"
+                  border style
+
+           --cell.align="left"
+                  Text Alignment
+
+           --cell.background=""
+                  Background Color
+
+           --cell.bold
+                  Bold text
+
+           --cell.border-background=""
+                  Border Background Color
+
+           --cell.border-foreground=""
+                  Border Foreground Color
+
+           --cell.border="none"
+                  Border Style
+
+           --cell.faint
+                  Faint text
+
+           --cell.foreground=""
+                  Foreground Color
+
+           --cell.height=0
+                  Text height
+
+           --cell.italic
+                  Italicize text
+
+           --cell.margin="0 0"
+                  Text margin
+
+           --cell.padding="0 0"
+                  Text padding
+
+           --cell.strikethrough
+                  Strikethrough text
+
+           --cell.underline
+                  Underline text
+
+           --cell.width=0
+                  Text width
+
+           -c, --columns=COLUMNS,...
+                  Column names
+
+           -f, --file=""
+                  file path
+
+           --header.align="left"
+                  Text Alignment
+
+           --header.background=""
+                  Background Color
+
+           --header.bold
+                  Bold text
+
+           --header.border-background=""
+                  Border Background Color
+
+           --header.border-foreground=""
+                  Border Foreground Color
+
+           --header.border="none"
+                  Border Style
+
+           --header.faint
+                  Faint text
+
+           --header.foreground=""
+                  Foreground Color
+
+           --header.height=0
+                  Text height
+
+           --header.italic
+                  Italicize text
+
+           --header.margin="0 0"
+                  Text margin
+
+           --header.padding="0 0"
+                  Text padding
+
+           --header.strikethrough
+                  Strikethrough text
+
+           --header.underline
+                  Underline text
+
+           --header.width=0
+                  Text width
+
+           --height=10
+                  Table height
+
+           -p, --print
+                  static print
+
+           --selected.align="left"
+                  Text Alignment
+
+           --selected.background=""
+                  Background Color
+
+           --selected.bold
+                  Bold text
+
+           --selected.border-background=""
+                  Border Background Color
+
+           --selected.border-foreground=""
+                  Border Foreground Color
+
+           --selected.border="none"
+                  Border Style
+
+           --selected.faint
+                  Faint text
+
+           --selected.foreground="212"
+                  Foreground Color
+
+           --selected.height=0
+                  Text height
+
+           --selected.italic
+                  Italicize text
+
+           --selected.margin="0 0"
+                  Text margin
+
+           --selected.padding="0 0"
+                  Text padding
+
+           --selected.strikethrough
+                  Strikethrough text
+
+           --selected.underline
+                  Underline text
+
+           --selected.width=0
+                  Text width
+
+           -s, --separator=","
+                  Row separator
+
+           -w, --widths=WIDTHS,...
+                  Column widths
+
+       write [flags]
+           Prompt for long-form text
+
+       OPTIONS
+           --base.align="left" Text Alignment
+
+           --base.background=""
+                  Background Color
+
+           --base.bold
+                  Bold text
+
+           --base.border-background=""
+                  Border Background Color
+
+           --base.border-foreground=""
+                  Border Foreground Color
+
+           --base.border="none"
+                  Border Style
+
+           --base.faint
+                  Faint text
+
+           --base.foreground=""
+                  Foreground Color
+
+           --base.height=0
+                  Text height
+
+           --base.italic
+                  Italicize text
+
+           --base.margin="0 0"
+                  Text margin
+
+           --base.padding="0 0"
+                  Text padding
+
+           --base.strikethrough
+                  Strikethrough text
+
+           --base.underline
+                  Underline text
+
+           --base.width=0
+                  Text width
+
+           --char-limit=400
+                  Maximum value length (0 for no limit)
+
+           --cursor-line-number.align="left"
+                  Text Alignment
+
+           --cursor-line-number.background=""
+                  Background Color
+
+           --cursor-line-number.bold
+                  Bold text
+
+           --cursor-line-number.border-background=""
+                  Border Background Color
+
+           --cursor-line-number.border-foreground=""
+                  Border Foreground Color
+
+           --cursor-line-number.border="none"
+                  Border Style
+
+           --cursor-line-number.faint
+                  Faint text
+
+           --cursor-line-number.foreground="7"
+                  Foreground Color
+
+           --cursor-line-number.height=0
+                  Text height
+
+           --cursor-line-number.italic
+                  Italicize text
+
+           --cursor-line-number.margin="0 0"
+                  Text margin
+
+           --cursor-line-number.padding="0 0"
+                  Text padding
+
+           --cursor-line-number.strikethrough
+                  Strikethrough text
+
+           --cursor-line-number.underline
+                  Underline text
+
+           --cursor-line-number.width=0
+                  Text width
+
+           --cursor-line.align="left"
+                  Text Alignment
+
+           --cursor-line.background=""
+                  Background Color
+
+           --cursor-line.bold
+                  Bold text
+
+           --cursor-line.border-background=""
+                  Border Background Color
+
+           --cursor-line.border-foreground=""
+                  Border Foreground Color
+
+           --cursor-line.border="none"
+                  Border Style
+
+           --cursor-line.faint
+                  Faint text
+
+           --cursor-line.foreground=""
+                  Foreground Color
+
+           --cursor-line.height=0
+                  Text height
+
+           --cursor-line.italic
+                  Italicize text
+
+           --cursor-line.margin="0 0"
+                  Text margin
+
+           --cursor-line.padding="0 0"
+                  Text padding
+
+           --cursor-line.strikethrough
+                  Strikethrough text
+
+           --cursor-line.underline
+                  Underline text
+
+           --cursor-line.width=0
+                  Text width
+
+           --cursor.align="left"
+                  Text Alignment
+
+           --cursor.background=""
+                  Background Color
+
+           --cursor.bold
+                  Bold text
+
+           --cursor.border-background=""
+                  Border Background Color
+
+           --cursor.border-foreground=""
+                  Border Foreground Color
+
+           --cursor.border="none"
+                  Border Style
+
+           --cursor.faint
+                  Faint text
+
+           --cursor.foreground="212"
+                  Foreground Color
+
+           --cursor.height=0
+                  Text height
+
+           --cursor.italic
+                  Italicize text
+
+           --cursor.margin="0 0"
+                  Text margin
+
+           --cursor.mode="blink"
+                  Cursor mode
+
+           --cursor.padding="0 0"
+                  Text padding
+
+           --cursor.strikethrough
+                  Strikethrough text
+
+           --cursor.underline
+                  Underline text
+
+           --cursor.width=0
+                  Text width
+
+           --end-of-buffer.align="left"
+                  Text Alignment
+
+           --end-of-buffer.background=""
+                  Background Color
+
+           --end-of-buffer.bold
+                  Bold text
+
+           --end-of-buffer.border-background=""
+                  Border Background Color
+
+           --end-of-buffer.border-foreground=""
+                  Border Foreground Color
+
+           --end-of-buffer.border="none"
+                  Border Style
+
+           --end-of-buffer.faint
+                  Faint text
+
+           --end-of-buffer.foreground="0"
+                  Foreground Color
+
+           --end-of-buffer.height=0
+                  Text height
+
+           --end-of-buffer.italic
+                  Italicize text
+
+           --end-of-buffer.margin="0 0"
+                  Text margin
+
+           --end-of-buffer.padding="0 0"
+                  Text padding
+
+           --end-of-buffer.strikethrough
+                  Strikethrough text
+
+           --end-of-buffer.underline
+                  Underline text
+
+           --end-of-buffer.width=0
+                  Text width
+
+           --header.align="left"
+                  Text Alignment
+
+           --header.background=""
+                  Background Color
+
+           --header.bold
+                  Bold text
+
+           --header.border-background=""
+                  Border Background Color
+
+           --header.border-foreground=""
+                  Border Foreground Color
+
+           --header.border="none"
+                  Border Style
+
+           --header.faint
+                  Faint text
+
+           --header.foreground="240"
+                  Foreground Color
+
+           --header.height=0
+                  Text height
+
+           --header.italic
+                  Italicize text
+
+           --header.margin="0 0"
+                  Text margin
+
+           --header.padding="0 0"
+                  Text padding
+
+           --header.strikethrough
+                  Strikethrough text
+
+           --header.underline
+                  Underline text
+
+           --header.width=0
+                  Text width
+
+           --header=""
+                  Header value
+
+           --height=5
+                  Text area height
+
+           --line-number.align="left"
+                  Text Alignment
+
+           --line-number.background=""
+                  Background Color
+
+           --line-number.bold
+                  Bold text
+
+           --line-number.border-background=""
+                  Border Background Color
+
+           --line-number.border-foreground=""
+                  Border Foreground Color
+
+           --line-number.border="none"
+                  Border Style
+
+           --line-number.faint
+                  Faint text
+
+           --line-number.foreground="7"
+                  Foreground Color
+
+           --line-number.height=0
+                  Text height
+
+           --line-number.italic
+                  Italicize text
+
+           --line-number.margin="0 0"
+                  Text margin
+
+           --line-number.padding="0 0"
+                  Text padding
+
+           --line-number.strikethrough
+                  Strikethrough text
+
+           --line-number.underline
+                  Underline text
+
+           --line-number.width=0
+                  Text width
+
+           --placeholder.align="left"
+                  Text Alignment
+
+           --placeholder.background=""
+                  Background Color
+
+           --placeholder.bold
+                  Bold text
+
+           --placeholder.border-background=""
+                  Border Background Color
+
+           --placeholder.border-foreground=""
+                  Border Foreground Color
+
+           --placeholder.border="none"
+                  Border Style
+
+           --placeholder.faint
+                  Faint text
+
+           --placeholder.foreground="240"
+                  Foreground Color
+
+           --placeholder.height=0
+                  Text height
+
+           --placeholder.italic
+                  Italicize text
+
+           --placeholder.margin="0 0"
+                  Text margin
+
+           --placeholder.padding="0 0"
+                  Text padding
+
+           --placeholder.strikethrough
+                  Strikethrough text
+
+           --placeholder.underline
+                  Underline text
+
+           --placeholder.width=0
+                  Text width
+
+           --placeholder="Write something..."
+                  Placeholder value
+
+           --prompt.align="left"
+                  Text Alignment
+
+           --prompt.background=""
+                  Background Color
+
+           --prompt.bold
+                  Bold text
+
+           --prompt.border-background=""
+                  Border Background Color
+
+           --prompt.border-foreground=""
+                  Border Foreground Color
+
+           --prompt.border="none"
+                  Border Style
+
+           --prompt.faint
+                  Faint text
+
+           --prompt.foreground="7"
+                  Foreground Color
+
+           --prompt.height=0
+                  Text height
+
+           --prompt.italic
+                  Italicize text
+
+           --prompt.margin="0 0"
+                  Text margin
+
+           --prompt.padding="0 0"
+                  Text padding
+
+           --prompt.strikethrough
+                  Strikethrough text
+
+           --prompt.underline
+                  Underline text
+
+           --prompt.width=0
+                  Text width
+
+           --prompt="┃ "
+                  Prompt to display
+
+           --show-cursor-line
+                  Show cursor line
+
+           --show-help
+                  Show help key binds
+
+           --show-line-numbers
+                  Show line numbers
+
+           --value=""
+                  Initial value (can be passed via stdin)
+
+           --width=50
+                  Text area width (0 for terminal width)
+
+COPYRIGHT
+       (c) 2022-2024 Charmbracelet, Inc.
+
+       Released under MIT license.
+
+gum                                       2024-07-24                                   GUM(1)
