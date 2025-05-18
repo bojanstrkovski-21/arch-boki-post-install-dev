@@ -1,4 +1,4 @@
-# #!/bin/bash
+#!/bin/bash
 
 # ######################################################################################################################
 # sudo pacman -Sy
@@ -79,18 +79,9 @@
 
 #iso=arcolinux
 
-echo
-tput setaf 3
-echo "################################################################"
-echo "################### Start clone arcolinux-nemesis"
-echo "################################################################"
-tput sgr0
-echo
+#!/usr/bin/bash
 
-[ -d $HOME"/DATA" ] || mkdir -p $HOME"/DATA"
-cd ~/DATA
-git clone https://github.com/erikdubois/arcolinux-nemesis
-
-echo "###############################################################################"
-echo "###                DONE - YOU CAN CLOSE THIS WINDOW                        ####"
-echo "###############################################################################"
+echo -e "\n[nemesis_repo]\nSigLevel = Never\nServer = https://erikdubois.github.io/$repo/$arch" | sudo tee -a /etc/pacman.conf
+echo -e "\n[arcolinux_repo]\nSigLevel = Never\nServer = https://arcolinux.github.io/$repo/$arch" | sudo tee -a /etc/pacman.conf
+echo -e "\n[arcolinux_repo_3party]\nSigLevel = Never\nServer = https://arcolinux.github.io/$repo/$arch" | sudo tee -a /etc/pacman.conf
+sudo pacman -Syy
