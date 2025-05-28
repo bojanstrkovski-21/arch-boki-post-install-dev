@@ -56,13 +56,13 @@ update_and_refresh() {
         "
         echo "                        3. Add arch-boki Repos
         "
-        echo "                        4. Add ArcoLinux_repos
+        echo "                        4. Add erik_dubois_nemesis_repo
         "
         echo "                        5. Add Chaotic_repos
         "
         echo "                        6. Fix pacman_db_and_keys
         "
-        echo "                        7. Install ArcoLinux Apps (add repos first!)
+        echo "                        7. Install Archlinux_Tweak_Tool (add nemesis repo first!)
         "
         echo "                        8. Back to Main Menu
         "
@@ -75,10 +75,10 @@ update_and_refresh() {
             1) refresh_mirrors_db ;;
             2) update_system ;;
             3) add_arch_boki_repos ;;
-            4) add_arco_linux_repos ;;
+            4) add_nemesis_linux_repos ;;
             5) add_chaotic_linux_repos ;;
             6) fix-pacman-db-and-keys ;;
-            7) install_arcolinux_apps.sh ;;
+            7) install_archlinux_tweak_tool ;;
             8) return ;;
             9) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
@@ -228,11 +228,11 @@ fix-pacman-db-and-keys() {
     read -p "Press Enter to continue..."
 }
 
-install_arcolinux_apps.sh() {
+install_archlinux_tweak_tool() {
     clear
     echo "$ASCII_ART"
     echo "Installing ArchLinux TweakTool..."
-    ./add-repos/install_arcolinux_apps.sh
+    sudo pacman -S archlinux-tweak-tool-git
     # Add your code to add repos here
     read -p "Press Enter to continue..."
 }
