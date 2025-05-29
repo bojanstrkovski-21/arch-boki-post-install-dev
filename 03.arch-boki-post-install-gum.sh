@@ -199,7 +199,7 @@ add_arco_linux_repos() {
     clear
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
     gum style --align center --margin="0 50 0 5" "Adding add_arco_linux_repos..."
-    sudo pacman -S archlinux-tweak-tool-git
+    ../add-repos/get-the-arcolinux-keys-and-repos.sh
     read -p "Press Enter to continue..."
 }
 
