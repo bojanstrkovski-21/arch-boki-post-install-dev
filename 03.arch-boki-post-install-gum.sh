@@ -163,7 +163,7 @@ refresh_mirrors_db() {
     clear
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
     gum style --align center --margin="0 50 0 5" "Refreshing Mirrors..."
-    ../add-repos/upd_servers.sh
+    ./add-repos/upd_servers.sh
     read -p "Press Enter to continue..."
 }
 
@@ -181,7 +181,7 @@ refresh_mirrors_db() {
     clear
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
     gum style --align center --margin="0 50 0 5" "Refreshing Mirrors..."
-    ../add-repos/upd_servers.sh
+    ./add-repos/upd_servers.sh
     read -p "Press Enter to continue..."
 }
 
@@ -190,7 +190,7 @@ add_arch_boki_repos() {
     clear
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
     gum style --align center --margin="0 50 0 5" "Adding arch-boki Repos..."
-    ../add-repos/append_archboki_repo.sh
+    ./add-repos/append_archboki_repo.sh
     read -p "Press Enter to continue..."
 }
 
@@ -199,7 +199,7 @@ add_arco_linux_repos() {
     clear
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
     gum style --align center --margin="0 50 0 5" "Adding add_arco_linux_repos..."
-    ../add-repos/get-the-arcolinux-keys-and-repos.sh
+    ./add-repos/get-the-arcolinux-keys-and-repos.sh
     read -p "Press Enter to continue..."
 }
 
@@ -207,7 +207,7 @@ add_chaotic_linux_repos() {
     clear
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
     gum style --align center --margin="0 50 0 5" "Adding chaotic_garuda_repos..."
-    ../add-repos/install_and_append_chaotic_repo_and_keyrings.sh
+    ./add-repos/install_and_append_chaotic_repo_and_keyrings.sh
     read -p "Press Enter to continue..."
 }
 
@@ -216,7 +216,7 @@ fix-pacman-db-and-keys() {
     clear
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
     gum style --align center --margin="0 50 0 5" "Fixing pacman-db_and_keys..."
-    ../add-repos/fix-pacman-databases-and-keys.sh
+    ./add-repos/fix-pacman-databases-and-keys.sh
     read -p "Press Enter to continue..."
 }
 
