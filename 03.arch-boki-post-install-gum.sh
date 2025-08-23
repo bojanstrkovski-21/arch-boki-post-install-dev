@@ -259,7 +259,7 @@ hyprland() {
     clear
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
     gum style --align center --margin="0 0 0 5" "Installing Hyprland..."
-    ./choose-desktop/hyprland-scripts/00-choices.sh
+    ./choose-desktop/hyprland-scripts/00-hyprland-new.sh
     read -p "Press Enter to continue..."
 }
 

@@ -271,7 +271,7 @@ hyprland() {
     clear
     echo "$ASCII_ART"
     echo "Installing Hyprland..."
-    ./choose-desktop/hyprland-scripts/00-choices.sh
+    ./choose-desktop/hyprland-scripts/00-hyprland-new.sh
     read -p "Press Enter to continue..."
 }
 
