@@ -21,16 +21,15 @@ gum style --align center --margin="0 0 0 0" "$ASCII_ART"
 # Function to display the main menu
 main_menu() {
     echo ""
-    gum style --align center --margin="0 50 0 5" "Main Menu"
+    gum style --align center --margin="0 0 0 5" "Main Menu"
     echo ""
-    gum style --align center --margin="0 50 0 5" "1. Update and Refresh"
-    gum style --align center --margin="0 50 0 5" "2. Choose Desktop"
-    gum style --align center --margin="0 50 0 5" "3. Install Core Utils and Drivers"
-    gum style --align center --margin="0 50 0 5" "4. Install Apps"
-    gum style --align center --margin="0 50 0 5" "5. Quit Arch-Boki post install"
+    gum style --align center --margin="0 0 0 5" "1. Update and Refresh"
+    gum style --align center --margin="0 0 0 5" "2. Choose Desktop"
+    gum style --align center --margin="0 0 0 5" "3. Install Core Utils and Drivers"
+    gum style --align center --margin="0 0 0 5" "4. Install Apps"
+    gum style --align center --margin="0 0 0 5" "5. Quit Arch-Boki post install"
     echo ""
-    gum style --align center --margin="0 50 0 5" --foreground 212 "Please choose an option: "
-    read main_choice
+    read -p "$(gum style --align center --margin="1 0 0 5" --foreground 212 "Please choose an option: ")" main_choice
 
     case $main_choice in
         1) update_and_refresh ;;
@@ -48,21 +47,19 @@ update_and_refresh() {
         clear
         gum style --align center --margin="0 0 0 0" "$ASCII_ART"
         echo ""
-        gum style --align center --margin="0 50 0 5" "Update and Refresh"
+        gum style --align center --margin="0 0 0 5" "Update and Refresh"
         echo ""
-        gum style --align center --margin="0 50 0 5" "1. Refresh Mirrors"
-        gum style --align center --margin="0 50 0 5" "2. Update System"
-        gum style --align center --margin="0 50 0 5" "3. Add arch-boki Repos"
-        gum style --align center --margin="0 50 0 5" "4. Add erik_dubois_repos"
-        gum style --align center --margin="0 50 0 5" "5. Add Chaotic_repos"
-        gum style --align center --margin="0 50 0 5" "6. Fix pacman_db_and_keys"
-        gum style --align center --margin="0 50 0 5" "7. Install archlinux-tweak-tool (add nemesisrepo first!)"
-        gum style --align center --margin="0 50 0 5" "8. Back to Main Menu"
-        gum style --align center --margin="0 50 0 5" "9. Quit Arch-Boki post install"
+        gum style --align center --margin="0 0 0 5" "1. Refresh Mirrors"
+        gum style --align center --margin="0 0 0 5" "2. Update System"
+        gum style --align center --margin="0 0 0 5" "3. Add arch-boki Repos"
+        gum style --align center --margin="0 0 0 5" "4. Add erik_dubois_repos"
+        gum style --align center --margin="0 0 0 5" "5. Add Chaotic_repos"
+        gum style --align center --margin="0 0 0 5" "6. Fix pacman_db_and_keys"
+        gum style --align center --margin="0 0 0 5" "7. Install archlinux-tweak-tool (add nemesisrepo first!)"
+        gum style --align center --margin="0 0 0 5" "8. Back to Main Menu"
+        gum style --align center --margin="0 0 0 5" "9. Quit Arch-Boki post install"
         echo ""
-        gum style --align center --margin="0 50 0 5" --foreground 212 "Please choose an option: "
-
-        read update_choice
+        read -p "$(gum style --align center --margin="1 0 0 5" --foreground 212 "Please choose an option: ")" update_choice
 
         case $update_choice in
             1) refresh_mirrors_db ;;
@@ -85,18 +82,16 @@ choose_desktop() {
         clear
         gum style --align center --margin="0 0 0 0" "$ASCII_ART"
         echo ""
-        gum style --align center --margin="0 50 0 5" "Choose Desktop"
+        gum style --align center --margin="0 0 0 5" "Choose Desktop"
         echo ""
-        gum style --align center --margin="0 50 0 5" "1. Kde - Plasma"
-        gum style --align center --margin="0 50 0 5" "2. Xfce"
-        gum style --align center --margin="0 50 0 5" "3. Cinnamon"
-        gum style --align center --margin="0 50 0 5" "4. Hyprland"
-        gum style --align center --margin="0 50 0 5" "5. Back to Main Menu"
-        gum style --align center --margin="0 50 0 5" "6. Quit Arch-Boki post install"
+        gum style --align center --margin="0 0 0 5" "1. Kde - Plasma"
+        gum style --align center --margin="0 0 0 5" "2. Xfce"
+        gum style --align center --margin="0 0 0 5" "3. Cinnamon"
+        gum style --align center --margin="0 0 0 5" "4. Hyprland"
+        gum style --align center --margin="0 0 0 5" "5. Back to Main Menu"
+        gum style --align center --margin="0 0 0 5" "6. Quit Arch-Boki post install"
         echo ""
-        gum style --align center --margin="0 50 0 5" --foreground 212 "Please choose an option: "
-
-        read update_choice
+        read -p "$(gum style --align center --margin="1 0 0 5" --foreground 212 "Please choose an option: ")" update_choice
 
         case $update_choice in
             1) kde_plasma ;;
@@ -116,22 +111,20 @@ install_core_utils() {
         clear
         gum style --align center --margin="0 0 0 0" "$ASCII_ART"
         echo ""
-        gum style --align center --margin="0 50 0 5" "Install Core Utils and Drivers"
+        gum style --align center --margin="0 0 0 5" "Install Core Utils and Drivers"
         echo ""
-        gum style --align center --margin="0 50 0 5" "1. Cpu Check and Install Microcode"
-        gum style --align center --margin="0 50 0 5" "2. Install GPU Drivers"
-        gum style --align center --margin="0 50 0 5" "3. Install Audio Drivers"
-        gum style --align center --margin="0 50 0 5" "4. Install Bluetooth Drivers"
-        gum style --align center --margin="0 50 0 5" "5. Install Network Drivers"
-        gum style --align center --margin="0 50 0 5" "6. Install Printer Drivers"
-        gum style --align center --margin="0 50 0 5" "7. Install Fonts"
-        gum style --align center --margin="0 50 0 5" "8. Install Core Utils"
-        gum style --align center --margin="0 50 0 5" "9. Back to Main Menu"
-        gum style --align center --margin="0 50 0 5" "10. Quit Arch-Boki post install"
+        gum style --align center --margin="0 0 0 5" "1. Cpu Check and Install Microcode"
+        gum style --align center --margin="0 0 0 5" "2. Install GPU Drivers"
+        gum style --align center --margin="0 0 0 5" "3. Install Audio Drivers"
+        gum style --align center --margin="0 0 0 5" "4. Install Bluetooth Drivers"
+        gum style --align center --margin="0 0 0 5" "5. Install Network Drivers"
+        gum style --align center --margin="0 0 0 5" "6. Install Printer Drivers"
+        gum style --align center --margin="0 0 0 5" "7. Install Fonts"
+        gum style --align center --margin="0 0 0 5" "8. Install Core Utils"
+        gum style --align center --margin="0 0 0 5" "9. Back to Main Menu"
+        gum style --align center --margin="0 0 0 5" "10. Quit Arch-Boki post install"
         echo ""
-        gum style --align center --margin="0 50 0 5" --foreground 212 "Please choose an option: "
-
-        read update_choice
+        read -p "$(gum style --align center --margin="1 0 0 5" --foreground 212 "Please choose an option: ")" update_choice
 
         case $update_choice in
             1) cpu-microde-install ;;
@@ -153,7 +146,7 @@ install_core_utils() {
 install_apps() {
     clear
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
-    gum style --align center --margin="0 50 0 5" "Installing Apps..."
+    gum style --align center --margin="0 0 0 5" "Installing Apps..."
     ./install-scripts/130.apps.sh
     read -p "Press Enter to continue..."
 }
@@ -162,7 +155,7 @@ install_apps() {
 refresh_mirrors_db() {
     clear
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
-    gum style --align center --margin="0 50 0 5" "Refreshing Mirrors..."
+    gum style --align center --margin="0 0 0 5" "Refreshing Mirrors..."
     ./add-repos/upd_servers.sh
     read -p "Press Enter to continue..."
 }
@@ -171,7 +164,7 @@ refresh_mirrors_db() {
 add_arch_boki_repos() {
     clear
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
-    gum style --align center --margin="0 50 0 5" "Installing Apps..."
+    gum style --align center --margin="0 0 0 5" "Installing Apps..."
     ./install-scripts/130.apps.sh
     read -p "Press Enter to continue..."
 }
@@ -180,7 +173,7 @@ add_arch_boki_repos() {
 refresh_mirrors_db() {
     clear
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
-    gum style --align center --margin="0 50 0 5" "Refreshing Mirrors..."
+    gum style --align center --margin="0 0 0 5" "Refreshing Mirrors..."
     ./add-repos/upd_servers.sh
     read -p "Press Enter to continue..."
 }
@@ -189,7 +182,7 @@ refresh_mirrors_db() {
 add_arch_boki_repos() {
     clear
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
-    gum style --align center --margin="0 50 0 5" "Adding arch-boki Repos..."
+    gum style --align center --margin="0 0 0 5" "Adding arch-boki Repos..."
     ./add-repos/append_archboki_repo.sh
     read -p "Press Enter to continue..."
 }
@@ -198,7 +191,7 @@ add_arch_boki_repos() {
 add_arco_linux_repos() {
     clear
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
-    gum style --align center --margin="0 50 0 5" "Adding add_arco_linux_repos..."
+    gum style --align center --margin="0 0 0 5" "Adding add_arco_linux_repos..."
     ./add-repos/get-the-arcolinux-keys-and-repos.sh
     read -p "Press Enter to continue..."
 }
@@ -206,7 +199,7 @@ add_arco_linux_repos() {
 add_chaotic_linux_repos() {
     clear
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
-    gum style --align center --margin="0 50 0 5" "Adding chaotic_garuda_repos..."
+    gum style --align center --margin="0 0 0 5" "Adding chaotic_garuda_repos..."
     ./add-repos/install_and_append_chaotic_repo_and_keyrings.sh
     read -p "Press Enter to continue..."
 }
@@ -215,7 +208,7 @@ add_chaotic_linux_repos() {
 fix-pacman-db-and-keys() {
     clear
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
-    gum style --align center --margin="0 50 0 5" "Fixing pacman-db_and_keys..."
+    gum style --align center --margin="0 0 0 5" "Fixing pacman-db_and_keys..."
     ./add-repos/fix-pacman-databases-and-keys.sh
     read -p "Press Enter to continue..."
 }
@@ -223,7 +216,7 @@ fix-pacman-db-and-keys() {
 install_arcolinux_apps.sh() {
     clear
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
-    gum style --align center --margin="0 50 0 5" "Installing ArchLinux TweakTool..."
+    gum style --align center --margin="0 0 0 5" "Installing ArchLinux TweakTool..."
     sudo pacman -S archlinux-tweak-tool-git
     read -p "Press Enter to continue..."
 }
@@ -232,7 +225,7 @@ install_arcolinux_apps.sh() {
 update_system() {
     clear
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
-    gum style --align center --margin="0 50 0 5" "Updating System..."
+    gum style --align center --margin="0 0 0 5" "Updating System..."
     sudo pacman -Syyu
     read -p "Press Enter to continue..."
 }
@@ -241,7 +234,7 @@ update_system() {
 kde_plasma() {
     clear
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
-    gum style --align center --margin="0 50 0 5" "Installing Kde_Plasma..."
+    gum style --align center --margin="0 0 0 5" "Installing Kde_Plasma..."
     ./choose-desktop/kde-plasma/install-kde-plasma.sh
     read -p "Press Enter to continue..."
 }
@@ -249,7 +242,7 @@ kde_plasma() {
 xfce() {
     clear
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
-    gum style --align center --margin="0 50 0 5" "Installing Xfce..."
+    gum style --align center --margin="0 0 0 5" "Installing Xfce..."
     ./choose-desktop/xfce/install-xfce-and-sddm.sh
     read -p "Press Enter to continue..."
 }
@@ -257,7 +250,7 @@ xfce() {
 cinnamon() {
     clear
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
-    gum style --align center --margin="0 50 0 5" "Installing Cinnamon..."
+    gum style --align center --margin="0 0 0 5" "Installing Cinnamon..."
     ./choose-desktop/cinnamon/install_cinnamon.sh
     read -p "Press Enter to continue..."
 }
@@ -265,7 +258,7 @@ cinnamon() {
 hyprland() {
     clear
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
-    gum style --align center --margin="0 50 0 5" "Installing Hyprland..."
+    gum style --align center --margin="0 0 0 5" "Installing Hyprland..."
     ./choose-desktop/hyprland-scripts/00-choices.sh
     read -p "Press Enter to continue..."
 }
@@ -275,7 +268,7 @@ hyprland() {
 cpu-microde-install() {
     clear
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
-    gum style --align center --margin="0 50 0 5" "Installing Microcode..."
+    gum style --align center --margin="0 0 0 5" "Installing Microcode..."
     ./core-utils/microcode.sh
     read -p "Press Enter to continue..."
 }
@@ -283,7 +276,7 @@ cpu-microde-install() {
 gpu-drivers() {
     clear
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
-    gum style --align center --margin="0 50 0 5" "Installing GPU drivers..."
+    gum style --align center --margin="0 0 0 5" "Installing GPU drivers..."
     ./core-utils/gpu-drivers.sh
     read -p "Press Enter to continue..."
 }
@@ -291,7 +284,7 @@ gpu-drivers() {
 audio-drivers() {
     clear
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
-    gum style --align center --margin="0 50 0 5" "Installing Audio drivers..."
+    gum style --align center --margin="0 0 0 5" "Installing Audio drivers..."
     ./core-utils/audio-drivers.sh
     read -p "Press Enter to continue..."
 }
@@ -299,7 +292,7 @@ audio-drivers() {
 bluetooth-drivers() {
     clear
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
-    gum style --align center --margin="0 50 0 5" "Installing Bluetooth drivers..."
+    gum style --align center --margin="0 0 0 5" "Installing Bluetooth drivers..."
     ./install-scripts/123-bluetooth.sh
     read -p "Press Enter to continue..."
 }
@@ -307,7 +300,7 @@ bluetooth-drivers() {
 network-drivers() {
     clear
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
-    gum style --align center --margin="0 50 0 5" "Installing Network drivers..."
+    gum style --align center --margin="0 0 0 5" "Installing Network drivers..."
     ./install-scripts/126-network.sh
     read -p "Press Enter to continue..."
 }
@@ -315,7 +308,7 @@ network-drivers() {
 fonts() {
     clear
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
-    gum style --align center --margin="0 50 0 5" "Installing Fonts..."
+    gum style --align center --margin="0 0 0 5" "Installing Fonts..."
     ./install-scripts/125-fonts.sh
     read -p "Press Enter to continue..."
 }
@@ -323,7 +316,7 @@ fonts() {
 core-utils() {
     clear
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
-    gum style --align center --margin="0 50 0 5" "Installing Core Utils..."
+    gum style --align center --margin="0 0 0 5" "Installing Core Utils..."
     ./install-scripts/118-core.sh
     read -p "Press Enter to continue..."
 }
@@ -331,7 +324,7 @@ core-utils() {
 printer-drivers() {
     clear
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
-    gum style --align center --margin="0 50 0 5" "Installing Printer drivers..."
+    gum style --align center --margin="0 0 0 5" "Installing Printer drivers..."
     ./install-scripts/124-printers.sh
     read -p "Press Enter to continue..."
 }
