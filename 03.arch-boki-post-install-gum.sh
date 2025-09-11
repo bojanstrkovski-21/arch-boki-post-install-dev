@@ -310,6 +310,7 @@ fonts() {
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
     gum style --align center --margin="0 0 0 5" "Installing Fonts..."
     ./install-scripts/125-fonts.sh
+    ./install-scripts/125.1-install_nerdfonts.sh
     read -p "Press Enter to continue..."
 }
 
