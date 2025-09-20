@@ -1,0 +1,7 @@
+sudo bash -c 'pgrep --full --euid=0 "pacman" | while read -r -- pid; do
+    cat "/proc/${pid}/cmdline" | awk '"'"'{ gsub(/\x00/, " "); print }'"'"'
+    echo
+done'
+
+
+sudo rm --force --verbose '/var/lib/pacman/db.lck'
