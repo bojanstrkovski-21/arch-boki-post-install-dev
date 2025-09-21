@@ -81,7 +81,7 @@ file_managers() {
             6) dolphin ;;
             7) yazi_terminal ;;
             8) ranger_terminal ;;
-            9) return ;;
+            9) install_apps_menu ;;
             10) ./03.arch-boki-post-install-gum.sh ;;
             11) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
