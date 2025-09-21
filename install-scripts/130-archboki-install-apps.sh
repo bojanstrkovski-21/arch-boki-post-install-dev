@@ -28,8 +28,10 @@ install_apps_menu() {
     gum style --align center --margin="0 0 0 5" "4. Internet"
     gum style --align center --margin="0 0 0 5" "5. Multimedia"
     gum style --align center --margin="0 0 0 5" "6. Graphics"
-    gum style --align center --margin="0 0 0 5" "7. Main Menu"
-    gum style --align center --margin="0 0 0 5" "8. Quit Arch-Boki post install"
+    gum style --align center --margin="0 0 0 5" "7. System Info/Monitoring"
+    gum style --align center --margin="0 0 0 5" "8. System Tools"
+    gum style --align center --margin="0 0 0 5" "9. Main Menu"
+    gum style --align center --margin="0 0 0 5" "10. Quit Arch-Boki post install"
     echo ""
     read -p "$(gum style --align center --margin="1 0 0 5" --foreground 212 "Please choose an option: ")" main_choice
 
@@ -40,8 +42,10 @@ install_apps_menu() {
         4) internet ;;
         5) multimedia ;;
         6) graphics ;;
-        6) main_menu ;;
-        5) exit 0 ;;
+        7) system_info ;;
+        8) system_tools ;;
+        9) main_menu ;;
+        10) exit 0 ;;
         *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
     esac
 }
@@ -971,3 +975,255 @@ wallpaper_changer() {
     done
 }
 
+# Function for system_info submenu
+system_info() {
+    while true; do
+        clear
+        gum style --align center --margin="0 0 0 0" "$ASCII_ART"
+        echo ""
+        gum style --align center --margin="0 0 0 5" "System Info/Monitoring"
+        echo ""
+        gum style --align center --margin="0 0 0 5" "1. Bashtop"
+        gum style --align center --margin="0 0 0 5" "2. Btop"
+        gum style --align center --margin="0 0 0 5" "3. Countryfetch"
+        gum style --align center --margin="0 0 0 5" "4. Cpufetch"
+        gum style --align center --margin="0 0 0 5" "5. Fastfetch"
+        gum style --align center --margin="0 0 0 5" "6. Glances"
+        gum style --align center --margin="0 0 0 5" "7. Gtop"
+        gum style --align center --margin="0 0 0 5" "8. Htop"
+        gum style --align center --margin="0 0 0 5" "9. Hyfetch"
+        gum style --align center --margin="0 0 0 5" "10. Mission Center"
+        gum style --align center --margin="0 0 0 5" "11. Nvtop"
+        gum style --align center --margin="0 0 0 5" "12. Resources"
+        gum style --align center --margin="0 0 0 5" "13. Stacer"
+        gum style --align center --margin="0 0 0 5" "14. Xfce4-Taskmanager"
+        gum style --align center --margin="0 0 0 5" "15. Back to install_apps"
+        gum style --align center --margin="0 0 0 5" "16. Main Menu"
+        gum style --align center --margin="0 0 0 5" "17. Quit Arch-Boki install_apps"
+        echo ""
+        read -p "$(gum style --align center --margin="1 0 0 5" --foreground 212 "Please choose an option: ")" update_choice
+
+        case $update_choice in
+            1) sudo pacman -S --needed --noconfirm bashtop ;;
+            2) sudo pacman -S --needed --noconfirm btop ;;
+            3) sudo pacman -S --needed --noconfirm countryfetch ;;
+            4) sudo pacman -S --needed --noconfirm cpufetch ;;
+            5) sudo pacman -S --needed --noconfirm fastfetch ;;
+            6) sudo pacman -S --needed --noconfirm glances ;;
+            7) sudo pacman -S --needed --noconfirm gtop ;;
+            8) sudo pacman -S --needed --noconfirm htop ;;
+            9) sudo pacman -S --needed --noconfirm hyfetch ;;
+            10) sudo pacman -S --needed --noconfirm mission-center ;;
+            11) sudo pacman -S --needed --noconfirm nvtop ;;
+            12) sudo pacman -S --needed --noconfirm resources ;;
+            13) yay -S --needed --noconfirm stacer-bin ;;
+            14) sudo pacman -S --needed --noconfirm xfce4-taskmanager ;;
+            15) return ;;
+            16) ./03.arch-boki-post-install-gum.sh ;;
+            17) exit ;;
+            *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
+        esac
+    done
+}
+
+# Function for System Tools submenu
+system_tools() {
+    while true; do
+        clear
+        gum style --align center --margin="0 0 0 0" "$ASCII_ART"
+        echo ""
+        gum style --align center --margin="0 0 0 5" "System Tools"
+        echo ""
+        gum style --align center --margin="0 0 0 5" "1. App Launchers"
+        gum style --align center --margin="0 0 0 5" "2. Calculators"
+        gum style --align center --margin="0 0 0 5" "3. Partition tools"
+        gum style --align center --margin="0 0 0 5" "4. Screen Shooters"
+        gum style --align center --margin="0 0 0 5" "5. Screen Resolution Setters"
+        gum style --align center --margin="0 0 0 5" "6. Back to install_apps"
+        gum style --align center --margin="0 0 0 5" "7. Main Menu"
+        gum style --align center --margin="0 0 0 5" "8. Quit Arch-Boki install_apps"
+        echo ""
+        read -p "$(gum style --align center --margin="1 0 0 5" --foreground 212 "Please choose an option: ")" update_choice
+
+        case $update_choice in
+            1) app_launchers ;;
+            2) calaculators ;;
+            3) partition_tools ;;
+            4) screen_shooters ;;
+            5) screen_resolution ;;
+            6) return ;;
+            7) ./03.arch-boki-post-install-gum.sh ;;
+            8) exit ;;
+            *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
+        esac
+    done
+}
+
+# Function for app_launchers submenu
+app_launchers() {
+    while true; do
+        clear
+        gum style --align center --margin="0 0 0 0" "$ASCII_ART"
+        echo ""
+        gum style --align center --margin="0 0 0 5" "App Launchers"
+        echo ""
+        gum style --align center --margin="0 0 0 5" "1. Bemenu"
+        gum style --align center --margin="0 0 0 5" "2. Bemenu-Wayland"
+        gum style --align center --margin="0 0 0 5" "3. Dmenu(it is better to clone and build)"
+        gum style --align center --margin="0 0 0 5" "4. Fuzzel"
+        gum style --align center --margin="0 0 0 5" "5. Rofi"
+        gum style --align center --margin="0 0 0 5" "6. Rofi-Wayland"
+        gum style --align center --margin="0 0 0 5" "7. Tofi"
+        gum style --align center --margin="0 0 0 5" "8. Walker"
+        gum style --align center --margin="0 0 0 5" "9. Wofi"
+        gum style --align center --margin="0 0 0 5" "10. Back to install_apps"
+        gum style --align center --margin="0 0 0 5" "11. Main Menu"
+        gum style --align center --margin="0 0 0 5" "12. Quit Arch-Boki install_apps"
+        echo ""
+        read -p "$(gum style --align center --margin="1 0 0 5" --foreground 212 "Please choose an option: ")" update_choice
+
+        case $update_choice in
+            1) sudo pacman -S --needed --noconfirm bemenu ;;
+            2) sudo pacman -S --needed --noconfirm bemenu-wayland ;;
+            3) sudo pacman -S --needed --noconfirm dmenu ;;
+            4) sudo pacman -S --needed --noconfirm fuzzel ;;
+            5) sudo pacman -S --needed --noconfirm rofi ;;
+            6) sudo pacman -S --needed --noconfirm rofi-wayland ;;
+            7) sudo pacman -S --needed --noconfirm tofi ;;
+            8) sudo pacman -S --needed --noconfirm walker-bin ;;
+            9) sudo pacman -S --needed --noconfirm wofi ;;
+            10) return ;;
+            11) ./03.arch-boki-post-install-gum.sh ;;
+            12) exit ;;
+            *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
+        esac
+    done
+}
+
+# Function for calculators submenu
+calculators() {
+    while true; do
+        clear
+        gum style --align center --margin="0 0 0 0" "$ASCII_ART"
+        echo ""
+        gum style --align center --margin="0 0 0 5" "Calculators"
+        echo ""
+        gum style --align center --margin="0 0 0 5" "1. Galculator"
+        gum style --align center --margin="0 0 0 5" "2. Gnome Calculator"
+        gum style --align center --margin="0 0 0 5" "3. Qalculate-Gtk"
+        gum style --align center --margin="0 0 0 5" "4. Qalculate-Qt"
+        gum style --align center --margin="0 0 0 5" "5. Back to install_apps"
+        gum style --align center --margin="0 0 0 5" "6. Main Menu"
+        gum style --align center --margin="0 0 0 5" "7. Quit Arch-Boki install_apps"
+        echo ""
+        read -p "$(gum style --align center --margin="1 0 0 5" --foreground 212 "Please choose an option: ")" update_choice
+
+        case $update_choice in
+            1) sudo pacman -S --needed --noconfirm gnome-calculator ;;
+            2) sudo pacman -S --needed --noconfirm galculator ;;
+            3) sudo pacman -S --needed --noconfirm qalculate-gtk ;;
+            4) sudo pacman -S --needed --noconfirm qalculate-qt ;;
+            5) return ;;
+            6) ./03.arch-boki-post-install-gum.sh ;;
+            7) exit ;;
+            *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
+        esac
+    done
+}
+
+# Function for partition_tools submenu
+partition_tools() {
+    while true; do
+        clear
+        gum style --align center --margin="0 0 0 0" "$ASCII_ART"
+        echo ""
+        gum style --align center --margin="0 0 0 5" "Partition Tools"
+        echo ""
+        gum style --align center --margin="0 0 0 5" "1. Kde Partition Manager"
+        gum style --align center --margin="0 0 0 5" "2. Gnome Disks Utility"
+        gum style --align center --margin="0 0 0 5" "3. Gparted"
+        gum style --align center --margin="0 0 0 5" "4. Back to install_apps"
+        gum style --align center --margin="0 0 0 5" "5. Main Menu"
+        gum style --align center --margin="0 0 0 5" "6. Quit Arch-Boki install_apps"
+        echo ""
+        read -p "$(gum style --align center --margin="1 0 0 5" --foreground 212 "Please choose an option: ")" update_choice
+
+        case $update_choice in
+            1) sudo pacman -S --needed --noconfirm partitionmanager ;;
+            2) sudo pacman -S --needed --noconfirm gnome-disk-utility ;;
+            3) sudo pacman -S --needed --noconfirm gparted ;;
+            4) return ;;
+            5) ./03.arch-boki-post-install-gum.sh ;;
+            6) exit ;;
+            *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
+        esac
+    done
+}
+
+# Function for screen_shooters submenu
+screen_shooters() {
+    while true; do
+        clear
+        gum style --align center --margin="0 0 0 0" "$ASCII_ART"
+        echo ""
+        gum style --align center --margin="0 0 0 5" "Screen Shooters"
+        echo ""
+        gum style --align center --margin="0 0 0 5" "1. Flameshot"
+        gum style --align center --margin="0 0 0 5" "2. Kazam"
+        gum style --align center --margin="0 0 0 5" "3. Ksnip"
+        gum style --align center --margin="0 0 0 5" "4. Shutter"
+        gum style --align center --margin="0 0 0 5" "5. Spectacle"
+        gum style --align center --margin="0 0 0 5" "6. Xfce4-screenshooter"
+        gum style --align center --margin="0 0 0 5" "7. Back to install_apps"
+        gum style --align center --margin="0 0 0 5" "8. Main Menu"
+        gum style --align center --margin="0 0 0 5" "9. Quit Arch-Boki install_apps"
+        echo ""
+        read -p "$(gum style --align center --margin="1 0 0 5" --foreground 212 "Please choose an option: ")" update_choice
+
+        case $update_choice in
+            1) sudo pacman -S --needed --noconfirm flameshot ;;
+            2) sudo pacman -S --needed --noconfirm kazam ;;
+            3) sudo pacman -S --needed --noconfirm ksnip ;;
+            4) sudo pacman -S --needed --noconfirm shutter ;;
+            5) sudo pacman -S --needed --noconfirm spectacle ;;
+            6) sudo pacman -S --needed --noconfirm xfce4-screenshooter ;;
+            7) return ;;
+            8) ./03.arch-boki-post-install-gum.sh ;;
+            9) exit ;;
+            *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
+        esac
+    done
+}
+
+# Function for screen_resolution submenu
+screen_resolution() {
+    while true; do
+        clear
+        gum style --align center --margin="0 0 0 0" "$ASCII_ART"
+        echo ""
+        gum style --align center --margin="0 0 0 5" "Screen Resolution"
+        echo ""
+        gum style --align center --margin="0 0 0 5" "1. Arandr(gui x11)"
+        gum style --align center --margin="0 0 0 5" "2. nwg-displays(hyprland-sway-nwg-shell only)"
+        gum style --align center --margin="0 0 0 5" "3. wdisplays(gui wayland)"
+        gum style --align center --margin="0 0 0 5" "3. wlr-randr(cli wayland)"
+        gum style --align center --margin="0 0 0 5" "4. xorg-xrandr(cli x11)"
+        gum style --align center --margin="0 0 0 5" "5. Back to install_apps"
+        gum style --align center --margin="0 0 0 5" "6. Main Menu"
+        gum style --align center --margin="0 0 0 5" "7. Quit Arch-Boki install_apps"
+        echo ""
+        read -p "$(gum style --align center --margin="1 0 0 5" --foreground 212 "Please choose an option: ")" update_choice
+
+        case $update_choice in
+            1) sudo pacman -S --needed --noconfirm arandr ;;
+            2) sudo pacman -S --needed --noconfirm nwg-displays ;;
+            3) sudo pacman -S --needed --noconfirm wdisplays ;;
+            4) sudo pacman -S --needed --noconfirm wlr-randr ;;
+            4) sudo pacman -S --needed --noconfirm xorg-xrandr ;;
+            5) return ;;
+            6) ./03.arch-boki-post-install-gum.sh ;;
+            7) exit ;;
+            *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
+        esac
+    done
+}

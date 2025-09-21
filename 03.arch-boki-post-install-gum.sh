@@ -147,7 +147,7 @@ install_apps() {
     clear
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
     gum style --align center --margin="0 0 0 5" "Installing Apps..."
-    ./install-scripts/130.apps.sh
+    ./install-scripts/130-archboki-install-apps.sh
     read -p "Press Enter to continue..."
 }
 

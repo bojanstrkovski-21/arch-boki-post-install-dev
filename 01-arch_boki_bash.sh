@@ -175,7 +175,7 @@ install_apps() {
     clear
     echo "$ASCII_ART"
     echo "Installing Apps..."
-    ./install-scripts/130.apps.sh
+    ./install-scripts/130-archboki-install-apps.sh
     read -p "Press Enter to continue..."
 }
 
