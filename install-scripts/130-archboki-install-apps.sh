@@ -1227,3 +1227,8 @@ screen_resolution() {
         esac
     done
 }
+
+# Main loop
+while true; do
+    install_apps_menu
+done
