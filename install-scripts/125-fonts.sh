@@ -9,6 +9,7 @@ ttf-croscore \
 ttf-carlito \
 ttf-caladea \
 opendesktop-fonts \
+inter-font \
 ttf-opensans \
 terminus-font \
 freetype2 \
