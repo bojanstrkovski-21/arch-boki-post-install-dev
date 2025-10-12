@@ -11,6 +11,7 @@ ttf-caladea \
 opendesktop-fonts \
 ttf-opensans \
 terminus-font \
+inter-font \
 freetype2 \
 ttf-ms-fonts \
 ttf-mac-fonts \
