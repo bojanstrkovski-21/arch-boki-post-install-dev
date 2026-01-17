@@ -331,14 +331,14 @@ fonts() {
     clear
     echo "$ASCII_ART"
     echo "Installing fonts..."
-    ./install-scripts/125-fonts.sh
+    ./install-scripts/125-installfont-new.sh
     read -p "Press Enter to continue..."
 }
 
 core-utils() {
     clear
     echo "$ASCII_ART"
-    echo "Installing fonts..."
+    echo "Installing core-utils..."
     ./install-scripts/118-core.sh
     read -p "Press Enter to continue..."
 }
@@ -346,7 +346,7 @@ core-utils() {
 printer-drivers() {
     clear
     echo "$ASCII_ART"
-    echo "Installing fonts..."
+    echo "Installing printer drivers..."
     ./install-scripts/124-printers.sh
     read -p "Press Enter to continue..."
 }

@@ -1,0 +1,129 @@
+# Complete List of Nerd Fonts
+# Available from: https://github.com/ryanoasis/nerd-fonts
+# Version: v3.4.0
+# Total: 67 Patched Font Families
+
+# ============================================
+# CURRENTLY IN SCRIPT (12 fonts):
+# ============================================
+CascadiaCode       # Cascadia Code (Microsoft)
+FiraCode           # Fira Code
+FiraMono           # Fira Mono
+Hack               # Hack
+JetBrainsMono      # JetBrains Mono
+Meslo              # Meslo
+Overpass           # Overpass
+RobotoMono         # Roboto Mono
+SourceCodePro      # Source Code Pro (Adobe)
+Ubuntu             # Ubuntu Font
+UbuntuMono         # Ubuntu Mono
+UbuntuSans         # Ubuntu Sans
+
+# ============================================
+# ALL AVAILABLE NERD FONTS (67 total):
+# ============================================
+# Download names must match EXACTLY as shown below
+# These are the ZIP file names from GitHub releases
+
+0xProto                    # 0xProto (v2.300)
+3270                       # 3270 (v3.0.1)
+Agave                      # Agave (v37)
+AnonymousPro               # Anonymous Pro (v1.002)
+AtkinsonHyperlegibleMono   # Atkinson Hyperlegible Mono (v2.001)
+Arimo                      # Arimo (v1.33)
+AurulentSansMono           # Aurulent Sans Mono
+BigBlueTerminal            # BigBlueTerminal
+BitstreamVeraSansMono      # Bitstream Vera Sans Mono (v1.1)
+CascadiaCode               # Cascadia Code (v2407.24) ✓ IN SCRIPT
+CascadiaMono               # Cascadia Mono (v2407.24)
+CodeNewRoman               # Code New Roman (v2.0)
+ComicShannsMono            # Comic Shanns Mono (v1.3.2)
+CommitMono                 # Commit Mono (v1.143)
+Cousine                    # Cousine (v1.211)
+D2Coding                   # D2Coding (v1.3.2)
+DaddyTimeMono              # DaddyTimeMono (v1.2.3)
+DepartureMono              # Departure Mono (v1.422)
+DejaVuSansMono             # DejaVu Sans Mono (v2.37)
+DroidSansMono              # Droid Sans Mono (v1.00-113)
+EnvyCodeR                  # Envy Code R (v0.79)
+FantasqueSansMono          # Fantasque Sans Mono (v1.8.0)
+FiraCode                   # Fira Code (v6.2) ✓ IN SCRIPT
+FiraMono                   # Fira Mono (v3.206) ✓ IN SCRIPT
+GeistMono                  # Geist Mono (v1.401)
+Go-Mono                    # Go Mono (v2.010)
+Gohu                       # Gohu TTF/Gohu (v2.0)
+Hack                       # Hack (v3.003) ✓ IN SCRIPT
+Hasklig                    # Hasklig (v1.2)
+HeavyData                  # HeavyData (v1)
+Hermit                     # Hermit (v2.0)
+iA-Writer                  # iA Writer (Dec 2018)
+IBMPlexMono                # IBM Plex Mono (v2.004)
+Inconsolata                # Inconsolata (v3.000)
+InconsolataGo              # InconsolataGo (v1.013)
+InconsolataLGC             # Inconsolata LGC (v1.13)
+IntelOneMono               # Intel One Mono (v1.4.0)
+Iosevka                    # Iosevka (v33.2.1)
+IosevkaTerm                # Iosevka Term (v33.2.1)
+IosevkaTermSlab            # Iosevka Term Slab (v33.2.1)
+JetBrainsMono              # JetBrains Mono (v2.304) ✓ IN SCRIPT
+Lekton                     # Lekton (v34)
+LiberationMono             # Liberation Mono (v2.1.5)
+Lilex                      # Lilex (v2.600)
+MartianMono                # Martian Mono (v1.1.0)
+Meslo                      # Meslo (v1.21) ✓ IN SCRIPT
+Monaspace                  # Monaspace (v1.200)
+Monofur                    # Monofur (v1.0)
+Monoid                     # Monoid (v0.61)
+Mononoki                   # Mononoki (v1.6)
+MPlus                      # M+ Fonts (v1.007)
+NerdFontsSymbolsOnly       # Nerd Fonts Symbols Only
+Noto                       # Noto (various versions)
+OpenDyslexic               # OpenDyslexic (v2.001)
+Overpass                   # Overpass (v3.0.5) ✓ IN SCRIPT
+ProFont                    # ProFont (v2.3, 2.2)
+ProggyClean                # ProggyClean (2004/04/15)
+Recursive                  # Recursive Mono (v1.085)
+RobotoMono                 # Roboto Mono (v3.0) ✓ IN SCRIPT
+ShareTechMono              # Share Tech Mono (v1.003)
+SourceCodePro              # Source Code Pro (v2.042) ✓ IN SCRIPT
+SpaceMono                  # Space Mono (v1.001)
+Terminus                   # Terminus TTF (v4.49.3)
+Tinos                      # Tinos (v1.23)
+Ubuntu                     # Ubuntu Font (v0.83) ✓ IN SCRIPT
+UbuntuMono                 # Ubuntu Mono (v0.80) ✓ IN SCRIPT
+UbuntuSans                 # Ubuntu Sans (v1.006) ✓ IN SCRIPT
+VictorMono                 # Victor Mono (v1.5.6)
+ZedMono                    # Zed Mono (v1.2.0)
+
+# ============================================
+# IMPORTANT NOTES:
+# ============================================
+# 1. Font names are CASE-SENSITIVE and must match exactly
+# 2. Use these exact names for downloading from GitHub releases
+# 3. Download URL format:
+#    https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FONTNAME.zip
+# 4. To add fonts to the script, copy names to the nerd_fonts array
+# 5. Some fonts have RFN (Reserved Font Name) - check license
+
+# ============================================
+# POPULAR ADDITIONS TO CONSIDER:
+# ============================================
+# - CascadiaMono (Microsoft's Cascadia Mono variant)
+# - CommitMono (Modern monospace)
+# - GeistMono (Vercel's Geist Mono)
+# - Iosevka (Highly customizable)
+# - IBMPlexMono (IBM Plex Mono)
+# - Monaspace (GitHub's new font family)
+# - VictorMono (Cursive italics)
+# - ZedMono (Zed editor font)
+
+# ============================================
+# HOW TO ADD TO YOUR SCRIPT:
+# ============================================
+# 1. Copy the exact font name from above
+# 2. Add to the nerd_fonts array in your script:
+#    declare -a nerd_fonts=(
+#        "CascadiaCode"
+#        "FontNameHere"    # <-- Add new fonts here
+#        ...
+#    )
