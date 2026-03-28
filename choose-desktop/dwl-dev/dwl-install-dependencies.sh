@@ -1,4 +1,4 @@
-#!/usr/bin/anv bash
+#!/usr/bin/env bash
 
 
 sudo pacman -S --needed \

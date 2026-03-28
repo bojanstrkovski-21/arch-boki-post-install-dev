@@ -21,7 +21,7 @@ sudo pacman -S --needed --noconfirm brave
 ## Firefox
 sudo pacman -S --needed --noconfirm firefox
 
-# Audio and Video plyers
+# Audio and Video players
 sudo pacman -S --needed --noconfirm celluloid
 sudo pacman -S --needed --noconfirm kodi
 sudo pacman -S --needed --noconfirm mpd

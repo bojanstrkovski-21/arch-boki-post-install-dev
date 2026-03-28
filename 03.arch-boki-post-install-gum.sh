@@ -55,7 +55,7 @@ update_and_refresh() {
         gum style --align center --margin="0 0 0 5" "4. Add erik_dubois_repos"
         gum style --align center --margin="0 0 0 5" "5. Add Chaotic_repos"
         gum style --align center --margin="0 0 0 5" "6. Fix pacman_db_and_keys"
-        gum style --align center --margin="0 0 0 5" "7. Install archlinux-tweak-tool (add nemesisrepo first!)"
+        gum style --align center --margin="0 0 0 5" "7. Install archlinux-tweak-tool (add nemesis repo first!)"
         gum style --align center --margin="0 0 0 5" "8. Back to Main Menu"
         gum style --align center --margin="0 0 0 5" "9. Quit Arch-Boki post install"
         echo ""
@@ -127,7 +127,7 @@ install_core_utils() {
         read -p "$(gum style --align center --margin="1 0 0 5" --foreground 212 "Please choose an option: ")" update_choice
 
         case $update_choice in
-            1) cpu-microde-install ;;
+            1) cpu-microcode-install ;;
             2) gpu-drivers ;;
             3) audio-drivers ;;
             4) bluetooth-drivers ;;

@@ -148,7 +148,7 @@ yazi_terminal() {
     clear
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
     gum style --align center --margin="0 0 0 5" "Installing Yazi_Terminal File Manager..."
-    sudo pacman -S --needed --noconfirm yazy 
+    sudo pacman -S --needed --noconfirm yazi 
     read -p "Press Enter to continue..."
 }
 
@@ -259,7 +259,7 @@ text_devt_office_pdf() {
         gum style --align center --margin="0 0 0 5" "Text, Pdf, Dev_tools"
         echo ""
         gum style --align center --margin="0 0 0 5" "1. Text editors"
-        gum style --align center --margin="0 0 0 5" "2. Office suits"
+        gum style --align center --margin="0 0 0 5" "2. Office suites"
         gum style --align center --margin="0 0 0 5" "3. Markdown editors"
         gum style --align center --margin="0 0 0 5" "4. Pdf viewers"
         gum style --align center --margin="0 0 0 5" "5. Dev Tools"
@@ -270,8 +270,8 @@ text_devt_office_pdf() {
         read -p "$(gum style --align center --margin="1 0 0 5" --foreground 212 "Please choose an option: ")" update_choice
 
         case $update_choice in
-            1) text_edtors ;;
-            2) office_suits ;;
+            1) text_editors ;;
+            2) office_suites ;;
             3) markdown_editors ;;
             4) pdf_viewers ;;
             5) devtools ;;
@@ -284,7 +284,7 @@ text_devt_office_pdf() {
 }
 
 # Function for "Text Editors" submenu
-text_edtors() {
+text_editors() {
     while true; do
         clear
         gum style --align center --margin="0 0 0 0" "$ASCII_ART"
@@ -318,13 +318,13 @@ text_edtors() {
     done
 }
 
-# Function for "Office suits" submenu
-office_suits() {
+# Function for "Office suites" submenu
+office_suites() {
     while true; do
         clear
         gum style --align center --margin="0 0 0 0" "$ASCII_ART"
         echo ""
-        gum style --align center --margin="0 0 0 5" "Office suits"
+        gum style --align center --margin="0 0 0 5" "Office suites"
         echo ""
         gum style --align center --margin="0 0 0 5" "1. LibreOffice"
         gum style --align center --margin="0 0 0 5" "2. OnlyOffice"

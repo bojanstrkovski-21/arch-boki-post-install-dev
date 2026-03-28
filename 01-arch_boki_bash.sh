@@ -155,7 +155,7 @@ while true; do
     read update_choice
 
     case $update_choice in
-        1) cpu-microde-install ;;
+        1) cpu-microcode-install ;;
         2) gpu-drivers ;;
         3) audio-drivers ;;
         4) bluetooth-drivers ;;

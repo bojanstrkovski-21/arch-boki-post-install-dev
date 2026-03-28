@@ -65,7 +65,7 @@ ktextwidgets   \
 kunitconversion    \
 kwidgetsaddons 
 
-### Qt6 gropoup (all)
+### Qt6 group (all)
 sudo pacman  -S --needed --noconfirm \
 qt6 \
 kvantum
