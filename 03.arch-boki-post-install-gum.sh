@@ -69,7 +69,7 @@ update_and_refresh() {
             5) add_chaotic_linux_repos ;;
             6) fix-pacman-db-and-keys ;;
             7) install_arcolinux_apps.sh ;;
-            8) return ;;
+            8) ./03.arch-boki-post-install-gum.sh ;;
             9) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
@@ -98,7 +98,7 @@ choose_desktop() {
             2) xfce ;;
             3) cinnamon ;;
             4) hyprland ;;
-            5) return ;;
+            5) ./03.arch-boki-post-install-gum.sh  ;;
             6) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
@@ -135,7 +135,7 @@ install_core_utils() {
             6) printer-drivers ;;
             7) fonts ;;
             8) core-utils ;;
-            9) return ;;
+            9) ./03.arch-boki-post-install-gum.sh  ;;
             10) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
@@ -148,7 +148,7 @@ install_apps() {
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
     gum style --align center --margin="0 0 0 5" "Installing Apps..."
     ./install-scripts/130-archboki-install-apps.sh
-    read -p "Press Enter to continue..."
+    exit $?
 }
 
 # Function for "Refresh Mirrors"

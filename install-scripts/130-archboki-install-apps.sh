@@ -1,6 +1,9 @@
 #!/bin/bash
 
-sudo pacman -S gum --needed --noconfirm
+MAIN_SCRIPT="$(dirname "$0")/../03.arch-boki-post-install-gum.sh"
+THIS_SCRIPT="${BASH_SOURCE[0]}"
+
+#sudo pacman -S gum --needed --noconfirm
 
 # ASCII Art
 ASCII_ART="
@@ -44,7 +47,7 @@ install_apps_menu() {
         6) graphics ;;
         7) system_info ;;
         8) system_tools ;;
-        9) main_menu ;;
+        9) bash "$MAIN_SCRIPT" ;;
         10) exit 0 ;;
         *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
     esac
@@ -81,8 +84,8 @@ file_managers() {
             6) dolphin ;;
             7) yazi_terminal ;;
             8) ranger_terminal ;;
-            9) install_apps_menu ;;
-            10) ./03.arch-boki-post-install-gum.sh ;;
+            9) bash "$THIS_SCRIPT" ;;
+            10) bash "$MAIN_SCRIPT" ;;
             11) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
@@ -188,8 +191,8 @@ terminal_emulators() {
             4) tilix ;;
             5) wezterm ;;
             6) xfce4_terminal ;;
-            7) return ;;
-            8) ./03.arch-boki-post-install-gum.sh ;;
+            7) bash "$THIS_SCRIPT" ;;
+            8) bash "$MAIN_SCRIPT" ;;
             9) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
@@ -275,8 +278,8 @@ text_devt_office_pdf() {
             3) markdown_editors ;;
             4) pdf_viewers ;;
             5) devtools ;;
-            6) return ;;
-            7) ./03.arch-boki-post-install-gum.sh ;;
+            6) bash "$THIS_SCRIPT" ;;
+            7) bash "$MAIN_SCRIPT" ;;
             8) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
@@ -310,8 +313,8 @@ text_editors() {
             4) sudo pacman -S --needed --noconfirm mousepad ;;
             5) sudo pacman -S --needed --noconfirm sublime-text-4 ;;
             6) sudo pacman -S --needed --noconfirm xed ;;
-            7) return ;;
-            8) ./03.arch-boki-post-install-gum.sh ;;
+            7) bash "$THIS_SCRIPT" ;;
+            8) bash "$MAIN_SCRIPT" ;;
             9) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
@@ -337,8 +340,8 @@ office_suites() {
         case $update_choice in
             1) sudo pacman -S --needed --noconfirm libreoffice-fresh ;;
             2) sudo pacman -S --needed --noconfirm onlyoffice ;;
-            3) return ;;
-            4) ./03.arch-boki-post-install-gum.sh ;;
+            3) bash "$THIS_SCRIPT" ;;
+            4) bash "$MAIN_SCRIPT" ;;
             5) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
@@ -366,8 +369,8 @@ markdown_editors() {
             1) yay -S affine-bin ;;
             2) sudo pacman -S --needed --noconfirm obsidian ;;
             3) sudo pacman -S --needed --noconfirm qownnotes ;;
-            4) return ;;
-            5) ./03.arch-boki-post-install-gum.sh ;;
+            4) bash "$THIS_SCRIPT" ;;
+            5) bash "$MAIN_SCRIPT" ;;
             6) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
@@ -399,8 +402,8 @@ pdf_viewers() {
             3) sudo pacman -S --needed --noconfirm xpdf ;;
             4) sudo pacman -S --needed --noconfirm xreader ;;
             5) sudo pacman -S --needed --noconfirm zathura ;;
-            6) return ;;
-            7) ./03.arch-boki-post-install-gum.sh ;;
+            6) bash "$THIS_SCRIPT" ;;
+            7) bash "$MAIN_SCRIPT" ;;
             8) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
@@ -436,8 +439,8 @@ devtools() {
             5) sudo pacman -S --needed --noconfirm vscodium vscodium-marketplace ;;
             6) sudo pacman -S --needed --noconfirm visual-studio-code-bin ;;
             7) sudo pacman -S --needed --noconfirm zed ;;
-            8) return ;;
-            9) ./03.arch-boki-post-install-gum.sh ;;
+            8) bash "$THIS_SCRIPT" ;;
+            9) bash "$MAIN_SCRIPT" ;;
             10) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
@@ -467,8 +470,8 @@ internet() {
             2) web_browsers ;;
             3) downloaders ;;
             4) Recorders ;;
-            5) return ;;
-            6) ./03.arch-boki-post-install-gum.sh ;;
+            5) bash "$THIS_SCRIPT" ;;
+            6) bash "$MAIN_SCRIPT" ;;
             7) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
@@ -496,8 +499,8 @@ comunication() {
             1) sudo pacman -S --needed --noconfirm discord ;;
             2) sudo pacman -S --needed --noconfirm signal-desktop ;;
             3) sudo pacman -S --needed --noconfirm telegram-desktop ;;
-            4) return ;;
-            5) ./03.arch-boki-post-install-gum.sh ;;
+            4) bash "$THIS_SCRIPT" ;;
+            5) bash "$MAIN_SCRIPT" ;;
             6) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
@@ -535,8 +538,8 @@ web_browsers() {
             6) sudo pacman -S --needed --noconfirm librewolf ;;
             7) sudo pacman -S --needed --noconfirm qutebrowser ;;
             8) sudo pacman -S --needed --noconfirm vivaldi vivaldi-ffmpeg-codecs ;;
-            9) return ;;
-            10) ./03.arch-boki-post-install-gum.sh ;;
+            9) bash "$THIS_SCRIPT" ;;
+            10) bash "$MAIN_SCRIPT" ;;
             11) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
@@ -568,8 +571,8 @@ downloaders() {
             3) sudo pacman -S --needed --noconfirm ktorrent ;;
             4) sudo pacman -S --needed --noconfirm transmission-gtk ;;
             5) sudo pacman -S --needed --noconfirm transmission-qt ;;
-            6) return ;;
-            7) ./03.arch-boki-post-install-gum.sh ;;
+            6) bash "$THIS_SCRIPT" ;;
+            7) bash "$MAIN_SCRIPT" ;;
             8) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
@@ -603,8 +606,8 @@ recorders() {
             4) sudo pacman -S --needed --noconfirm obs-studio ;;
             5) sudo pacman -S --needed --noconfirm peek ;;
             6) sudo pacman -S --needed --noconfirm simplescreenrecorder-qt6-git ;;
-            7) return ;;
-            8) ./03.arch-boki-post-install-gum.sh ;;
+            7) bash "$THIS_SCRIPT" ;;
+            8) bash "$MAIN_SCRIPT" ;;
             9) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
@@ -636,8 +639,8 @@ multimedia() {
             3) audio_editors ;;
             4) video_editors ;;
             4) sutitle_editors ;;
-            5) return ;;
-            6) ./03.arch-boki-post-install-gum.sh ;;
+            5) bash "$THIS_SCRIPT" ;;
+            6) bash "$MAIN_SCRIPT" ;;
             7) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
@@ -681,8 +684,8 @@ audio_plaeyers() {
             9) sudo pacman -S --needed --noconfirm rhythmbox ;;
             10) sudo pacman -S --needed --noconfirm sayonara-player ;;
             11) sudo pacman -S --needed --noconfirm strawberry ;;
-            12) return ;;
-            13) ./03.arch-boki-post-install-gum.sh ;;
+            12) bash "$THIS_SCRIPT" ;;
+            13) bash "$MAIN_SCRIPT" ;;
             14) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
@@ -716,8 +719,8 @@ video_players() {
             4) sudo pacman -S --needed --noconfirm mpv ;;
             5) sudo pacman -S --needed --noconfirm smplayer smplayer-skins smplayer-themes ;;
             6) sudo pacman -S --needed --noconfirm vlc vlc-plugin-a52dec vlc-plugin-aalib vlc-plugin-alsa vlc-plugin-aom vlc-plugin-archive vlc-plugin-aribb24 vlc-plugin-aribb25 vlc-plugin-ass vlc-plugin-avahi vlc-plugin-bluray vlc-plugin-caca vlc-plugin-cddb vlc-plugin-chromecast vlc-plugin-dav1d vlc-plugin-dbus vlc-plugin-dbus-screensave vlc-plugin-dca vlc-plugin-dvb vlc-plugin-dvd vlc-plugin-faad2 vlc-plugin-ffmpeg vlc-plugin-firewire vlc-plugin-flac vlc-plugin-fluidsynth vlc-plugin-freetype vlc-plugin-gme vlc-plugin-gnutls vlc-plugin-gstreamer vlc-plugin-inflate vlc-plugin-jack vlc-plugin-journal vlc-plugin-jpeg vlc-plugin-kate vlc-plugin-kwallet vlc-plugin-libsecret vlc-plugin-lirc vlc-plugin-live555 vlc-plugin-lua vlc-plugin-mad vlc-plugin-matroska vlc-plugin-mdns vlc-plugin-modplug vlc-plugin-mpeg2 vlc-plugin-mpg123 vlc-plugin-mtp vlc-plugin-musepack vlc-plugin-nfs vlc-plugin-notify vlc-plugin-ogg vlc-plugin-opus vlc-plugin-png vlc-plugin-pulse vlc-plugin-quicksync vlc-plugin-samplerate vlc-plugin-sdl vlc-plugin-sftp vlc-plugin-shout vlc-plugin-smb vlc-plugin-soxr vlc-plugin-speex vlc-plugin-srt vlc-plugin-svg vlc-plugin-tag vlc-plugin-theora vlc-plugin-twolame vlc-plugin-udev vlc-plugin-upnp vlc-plugin-vorbis vlc-plugin-vpx vlc-plugin-x264 vlc-plugin-x265 vlc-plugin-xml vlc-plugin-zvb ;;
-            7) return ;;
-            8) ./03.arch-boki-post-install-gum.sh ;;
+            7) bash "$THIS_SCRIPT" ;;
+            8) bash "$MAIN_SCRIPT" ;;
             9) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
@@ -755,8 +758,8 @@ audio_editors() {
             6) sudo pacman -S --needed --noconfirm soundconverter ;;
             7) sudo pacman -S --needed --noconfirm reaper reapack sws ;;
             8) sudo pacman -S --needed --noconfirm tenacity ;;
-            9) return ;;
-            10) ./03.arch-boki-post-install-gum.sh ;;
+            9) bash "$THIS_SCRIPT" ;;
+            10) bash "$MAIN_SCRIPT" ;;
             11) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
@@ -792,8 +795,8 @@ video_editors() {
             5) sudo pacman -S --needed --noconfirm makemkv mkvtoolnix-cli mkvtoolnix-gui ;;
             6) sudo pacman -S --needed --noconfirm Openshot ;;
             7) sudo pacman -S --needed --noconfirm shotcut;;
-            8) return ;;
-            9) ./03.arch-boki-post-install-gum.sh ;;
+            8) bash "$THIS_SCRIPT" ;;
+            9) bash "$MAIN_SCRIPT" ;;
             10) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
@@ -821,8 +824,8 @@ subtitle_editors() {
             1) sudo pacman -S --needed --noconfirm aegisub ;;
             2) sudo pacman -S --needed --noconfirm subtitleedit ;;
             3) sudo pacman -S --needed --noconfirm subtitlecomposer ;;
-            4) return ;;
-            5) ./03.arch-boki-post-install-gum.sh ;;
+            4) bash "$THIS_SCRIPT" ;;
+            5) bash "$MAIN_SCRIPT" ;;
             6) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
@@ -850,8 +853,8 @@ graphics() {
             1) photo_viewers ;;
             2) photo_editors ;;
             3) wallpaper_changer ;;
-            4) return ;;
-            5) ./03.arch-boki-post-install-gum.sh ;;
+            4) bash "$THIS_SCRIPT" ;;
+            5) bash "$MAIN_SCRIPT" ;;
             6) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
@@ -889,8 +892,8 @@ photo_viewers() {
             6) sudo pacman -S --needed --noconfirm nsxiv ;;
             7) sudo pacman -S --needed --noconfirm qimgv-git;;
             8) sudo pacman -S --needed --noconfirm ristretto;;
-            9) return ;;
-            10) ./03.arch-boki-post-install-gum.sh ;;
+            9) bash "$THIS_SCRIPT" ;;
+            10) bash "$MAIN_SCRIPT" ;;
             11) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
@@ -926,8 +929,8 @@ photo_editors() {
             5) sudo pacman -S --needed --noconfirm pinta ;;
             6) sudo pacman -S --needed --noconfirm rawtherapee ;;
             7) sudo pacman -S --needed --noconfirm upscayl-desktop-git upscayl-models-desktop ;;
-            8) return ;;
-            9) ./03.arch-boki-post-install-gum.sh ;;
+            8) bash "$THIS_SCRIPT" ;;
+            9) bash "$MAIN_SCRIPT" ;;
             10) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
@@ -967,8 +970,8 @@ wallpaper_changer() {
             7) sudo pacman -S --needed --noconfirm variety ;;
             8) sudo pacman -S --needed --noconfirm waypaper-git ;;
             9) sudo pacman -S --needed --noconfirm xwallpaper ;;
-            10) return ;;
-            11) ./03.arch-boki-post-install-gum.sh ;;
+            10) bash "$THIS_SCRIPT" ;;
+            11) bash "$MAIN_SCRIPT" ;;
             12) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
@@ -1018,8 +1021,8 @@ system_info() {
             12) sudo pacman -S --needed --noconfirm resources ;;
             13) yay -S --needed --noconfirm stacer-bin ;;
             14) sudo pacman -S --needed --noconfirm xfce4-taskmanager ;;
-            15) return ;;
-            16) ./03.arch-boki-post-install-gum.sh ;;
+            15) bash "$THIS_SCRIPT" ;;
+            16) bash "$MAIN_SCRIPT" ;;
             17) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
@@ -1051,8 +1054,8 @@ system_tools() {
             3) partition_tools ;;
             4) screen_shooters ;;
             5) screen_resolution ;;
-            6) return ;;
-            7) ./03.arch-boki-post-install-gum.sh ;;
+            6) bash "$THIS_SCRIPT" ;;
+            7) bash "$MAIN_SCRIPT" ;;
             8) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
@@ -1092,8 +1095,8 @@ app_launchers() {
             7) sudo pacman -S --needed --noconfirm tofi ;;
             8) sudo pacman -S --needed --noconfirm walker-bin ;;
             9) sudo pacman -S --needed --noconfirm wofi ;;
-            10) return ;;
-            11) ./03.arch-boki-post-install-gum.sh ;;
+            10) bash "$THIS_SCRIPT" ;;
+            11) bash "$MAIN_SCRIPT" ;;
             12) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
@@ -1123,8 +1126,8 @@ calculators() {
             2) sudo pacman -S --needed --noconfirm galculator ;;
             3) sudo pacman -S --needed --noconfirm qalculate-gtk ;;
             4) sudo pacman -S --needed --noconfirm qalculate-qt ;;
-            5) return ;;
-            6) ./03.arch-boki-post-install-gum.sh ;;
+            5) bash "$THIS_SCRIPT" ;;
+            6) bash "$MAIN_SCRIPT" ;;
             7) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
@@ -1152,8 +1155,8 @@ partition_tools() {
             1) sudo pacman -S --needed --noconfirm partitionmanager ;;
             2) sudo pacman -S --needed --noconfirm gnome-disk-utility ;;
             3) sudo pacman -S --needed --noconfirm gparted ;;
-            4) return ;;
-            5) ./03.arch-boki-post-install-gum.sh ;;
+            4) bash "$THIS_SCRIPT" ;;
+            5) bash "$MAIN_SCRIPT" ;;
             6) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
@@ -1187,8 +1190,8 @@ screen_shooters() {
             4) sudo pacman -S --needed --noconfirm shutter ;;
             5) sudo pacman -S --needed --noconfirm spectacle ;;
             6) sudo pacman -S --needed --noconfirm xfce4-screenshooter ;;
-            7) return ;;
-            8) ./03.arch-boki-post-install-gum.sh ;;
+            7) bash "$THIS_SCRIPT" ;;
+            8) bash "$MAIN_SCRIPT" ;;
             9) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
@@ -1220,8 +1223,8 @@ screen_resolution() {
             3) sudo pacman -S --needed --noconfirm wdisplays ;;
             4) sudo pacman -S --needed --noconfirm wlr-randr ;;
             4) sudo pacman -S --needed --noconfirm xorg-xrandr ;;
-            5) return ;;
-            6) ./03.arch-boki-post-install-gum.sh ;;
+            5) bash "$THIS_SCRIPT" ;;
+            6) bash "$MAIN_SCRIPT" ;;
             7) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
