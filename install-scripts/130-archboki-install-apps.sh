@@ -469,7 +469,7 @@ internet() {
             1) comunication ;;
             2) web_browsers ;;
             3) downloaders ;;
-            4) Recorders ;;
+            4) recorders ;;
             5) bash "$THIS_SCRIPT" ;;
             6) bash "$MAIN_SCRIPT" ;;
             7) exit ;;
@@ -647,8 +647,8 @@ multimedia() {
     done
 }
 
-# Function for audio_plaeyers submenu
-audio_plaeyers() {
+# Function for audio_players submenu
+audio_players() {
     while true; do
         clear
         gum style --align center --margin="0 0 0 0" "$ASCII_ART"
@@ -1050,7 +1050,7 @@ system_tools() {
 
         case $update_choice in
             1) app_launchers ;;
-            2) calaculators ;;
+            2) calculators ;;
             3) partition_tools ;;
             4) screen_shooters ;;
             5) screen_resolution ;;
