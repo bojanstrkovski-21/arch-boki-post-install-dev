@@ -567,8 +567,8 @@ downloaders() {
 
         case $update_choice in
             1) sudo pacman -S --needed --noconfirm deluge-gtk ;;
-            2) sudo pacman -S --needed --noconfirm qbittorrent ;;
-            3) sudo pacman -S --needed --noconfirm ktorrent ;;
+            2) sudo pacman -S --needed --noconfirm ktorrent ;;
+            3) sudo pacman -S --needed --noconfirm qbittorrent ;;
             4) sudo pacman -S --needed --noconfirm transmission-gtk ;;
             5) sudo pacman -S --needed --noconfirm transmission-qt ;;
             6) bash "$THIS_SCRIPT" ;;
@@ -626,10 +626,10 @@ multimedia() {
         gum style --align center --margin="0 0 0 5" "2. Video Players"
         gum style --align center --margin="0 0 0 5" "3. Audio Editors"
         gum style --align center --margin="0 0 0 5" "4. Video Editors"
-        gum style --align center --margin="0 0 0 5" "4. Subtitle Editors"
-        gum style --align center --margin="0 0 0 5" "5. Back to install_apps"
-        gum style --align center --margin="0 0 0 5" "6. Main Menu"
-        gum style --align center --margin="0 0 0 5" "7. Quit Arch-Boki install_apps"
+        gum style --align center --margin="0 0 0 5" "5. Subtitle Editors"
+        gum style --align center --margin="0 0 0 5" "6. Back to install_apps"
+        gum style --align center --margin="0 0 0 5" "7. Main Menu"
+        gum style --align center --margin="0 0 0 5" "8. Quit Arch-Boki install_apps"
         echo ""
         read -p "$(gum style --align center --margin="1 0 0 5" --foreground 212 "Please choose an option: ")" update_choice
 
@@ -638,16 +638,16 @@ multimedia() {
             2) video_players ;;
             3) audio_editors ;;
             4) video_editors ;;
-            4) sutitle_editors ;;
-            5) bash "$THIS_SCRIPT" ;;
-            6) bash "$MAIN_SCRIPT" ;;
-            7) exit ;;
+            5) subtitle_editors ;;
+            6) bash "$THIS_SCRIPT" ;;
+            7) bash "$MAIN_SCRIPT" ;;
+            8) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
     done
 }
 
-# Function for audio_players submenu
+# Function for audio_plaeyers submenu
 audio_players() {
     while true; do
         clear
@@ -793,7 +793,7 @@ video_editors() {
             3) sudo pacman -S --needed --noconfirm kdenlive ;;
             4) sudo pacman -S --needed --noconfirm losslesscut-bin ;;
             5) sudo pacman -S --needed --noconfirm makemkv mkvtoolnix-cli mkvtoolnix-gui ;;
-            6) sudo pacman -S --needed --noconfirm Openshot ;;
+            6) sudo pacman -S --needed --noconfirm openshot ;;
             7) sudo pacman -S --needed --noconfirm shotcut;;
             8) bash "$THIS_SCRIPT" ;;
             9) bash "$MAIN_SCRIPT" ;;
@@ -1122,8 +1122,8 @@ calculators() {
         read -p "$(gum style --align center --margin="1 0 0 5" --foreground 212 "Please choose an option: ")" update_choice
 
         case $update_choice in
-            1) sudo pacman -S --needed --noconfirm gnome-calculator ;;
-            2) sudo pacman -S --needed --noconfirm galculator ;;
+            1) sudo pacman -S --needed --noconfirm galculator ;;
+            2) sudo pacman -S --needed --noconfirm gnome-calculator ;;
             3) sudo pacman -S --needed --noconfirm qalculate-gtk ;;
             4) sudo pacman -S --needed --noconfirm qalculate-qt ;;
             5) bash "$THIS_SCRIPT" ;;
@@ -1209,11 +1209,11 @@ screen_resolution() {
         gum style --align center --margin="0 0 0 5" "1. Arandr(gui x11)"
         gum style --align center --margin="0 0 0 5" "2. nwg-displays(hyprland-sway-nwg-shell only)"
         gum style --align center --margin="0 0 0 5" "3. wdisplays(gui wayland)"
-        gum style --align center --margin="0 0 0 5" "3. wlr-randr(cli wayland)"
-        gum style --align center --margin="0 0 0 5" "4. xorg-xrandr(cli x11)"
-        gum style --align center --margin="0 0 0 5" "5. Back to install_apps"
-        gum style --align center --margin="0 0 0 5" "6. Main Menu"
-        gum style --align center --margin="0 0 0 5" "7. Quit Arch-Boki install_apps"
+        gum style --align center --margin="0 0 0 5" "4. wlr-randr(cli wayland)"
+        gum style --align center --margin="0 0 0 5" "5. xorg-xrandr(cli x11)"
+        gum style --align center --margin="0 0 0 5" "6. Back to install_apps"
+        gum style --align center --margin="0 0 0 5" "7. Main Menu"
+        gum style --align center --margin="0 0 0 5" "8. Quit Arch-Boki install_apps"
         echo ""
         read -p "$(gum style --align center --margin="1 0 0 5" --foreground 212 "Please choose an option: ")" update_choice
 
@@ -1222,10 +1222,10 @@ screen_resolution() {
             2) sudo pacman -S --needed --noconfirm nwg-displays ;;
             3) sudo pacman -S --needed --noconfirm wdisplays ;;
             4) sudo pacman -S --needed --noconfirm wlr-randr ;;
-            4) sudo pacman -S --needed --noconfirm xorg-xrandr ;;
-            5) bash "$THIS_SCRIPT" ;;
-            6) bash "$MAIN_SCRIPT" ;;
-            7) exit ;;
+            5) sudo pacman -S --needed --noconfirm xorg-xrandr ;;
+            6) bash "$THIS_SCRIPT" ;;
+            7) bash "$MAIN_SCRIPT" ;;
+            8) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
         esac
     done

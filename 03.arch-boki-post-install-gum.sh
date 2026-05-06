@@ -68,7 +68,7 @@ update_and_refresh() {
             4) add_arco_linux_repos ;;
             5) add_chaotic_linux_repos ;;
             6) fix-pacman-db-and-keys ;;
-            7) install_arcolinux_apps.sh ;;
+            7) install_archlinux_apps ;;
             8) ./03.arch-boki-post-install-gum.sh ;;
             9) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
@@ -161,22 +161,22 @@ refresh_mirrors_db() {
 }
 
 # Function for "Add arch-boki Repos"
-add_arch_boki_repos() {
-    clear
-    gum style --align center --margin="0 0 0 0" "$ASCII_ART"
-    gum style --align center --margin="0 0 0 5" "Installing Apps..."
-    ./install-scripts/130.apps.sh
-    read -p "Press Enter to continue..."
-}
+#add_arch_boki_repos() {
+#    clear
+#    gum style --align center --margin="0 0 0 0" "$ASCII_ART"
+#    gum style --align center --margin="0 0 0 5" "Installing Apps..."
+#    ./install-scripts/130.apps.sh
+#    read -p "Press Enter to continue..."
+#}
 
 # Function for "Refresh Mirrors"
-refresh_mirrors_db() {
-    clear
-    gum style --align center --margin="0 0 0 0" "$ASCII_ART"
-    gum style --align center --margin="0 0 0 5" "Refreshing Mirrors..."
-    ./add-repos/upd_servers.sh
-    read -p "Press Enter to continue..."
-}
+#refresh_mirrors_db() {
+#    clear
+#    gum style --align center --margin="0 0 0 0" "$ASCII_ART"
+#    gum style --align center --margin="0 0 0 5" "Refreshing Mirrors..."
+#    ./add-repos/upd_servers.sh
+#    read -p "Press Enter to continue..."
+#}
 
 # Function for "Add arch-boki Repos"
 add_arch_boki_repos() {
@@ -213,7 +213,7 @@ fix-pacman-db-and-keys() {
     read -p "Press Enter to continue..."
 }
 
-install_arcolinux_apps.sh() {
+install_archlinux_apps() {
     clear
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
     gum style --align center --margin="0 0 0 5" "Installing ArchLinux TweakTool..."
@@ -265,7 +265,7 @@ hyprland() {
 
 # Functions for Install Core Utils and Drivers
 
-cpu-microde-install() {
+cpu-microcode-install() {
     clear
     gum style --align center --margin="0 0 0 0" "$ASCII_ART"
     gum style --align center --margin="0 0 0 5" "Installing Microcode..."

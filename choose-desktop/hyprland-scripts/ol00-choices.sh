@@ -3,11 +3,11 @@
 
  # Get the current directory 
  
- DIR="$( cd "$( dirname "${BASH\_SOURCE\[0\]}" )" >/dev/null 2>&1 && pwd )" 
+ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )" 
  
  # Iterate over all .sh files in the current directory 
 
-for script in "$DIR"/\*.sh; do
+for script in "$DIR"/*.sh; do
  
  # Make sure the file is a regular file (not a directory) and ends with .sh 
  

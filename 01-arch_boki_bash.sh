@@ -260,7 +260,7 @@ kde_plasma() {
 xfce() {
     clear
     echo "$ASCII_ART"
-    echo "Installing Kde_Plasma..."
+    echo "Installing Xfce..."
     ./choose-desktop/xfce/install-xfce-and-sddm.sh
     read -p "Press Enter to continue..."
 }
@@ -268,7 +268,7 @@ xfce() {
 cinnamon() {
     clear
     echo "$ASCII_ART"
-    echo "Installing Kde_Plasma..."
+    echo "Installing Cinnamon..."
     ./choose-desktop/cinnamon/install_cinnamon.sh
     read -p "Press Enter to continue..."
 }
@@ -284,8 +284,8 @@ hyprland() {
 
 # Functions for Install Core Utils and Drivers
 
-# Function for cpu-microde-install
-cpu-microde-install() {
+# Function for cpu-microcode-install
+cpu-microcode-install() {
     clear
     echo "$ASCII_ART"
     echo "Installing Microcode..."

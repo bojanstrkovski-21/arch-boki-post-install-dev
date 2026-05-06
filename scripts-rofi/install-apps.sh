@@ -37,6 +37,7 @@ xed()                  { inst xed; }
 libreoffice()          { inst libreoffice-fresh; }
 onlyoffice()           { inst onlyoffice; }
 
+affine()               { yay -S --needed --noconfirm affine-bin; }
 obsidian()             { inst obsidian; }
 qownnotes()            { inst qownnotes; }
 
@@ -158,6 +159,7 @@ hyfetch()              { inst hyfetch; }
 mission_center()       { inst mission-center; }
 nvtop()                { inst nvtop; }
 resources()            { inst resources; }
+stacer()               { yay -S --needed --noconfirm stacer-bin; }
 xfce4_taskmanager()    { inst xfce4-taskmanager; }
 
 bemenu()               { inst bemenu; }

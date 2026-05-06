@@ -76,7 +76,7 @@ update_and_refresh() {
             4) add_arco_linux_repos ;;
             5) add_chaotic_linux_repos ;;
             6) fix-pacman-db-and-keys ;;
-            7) install_arcolinux_apps.sh ;;
+            7) install_arcolinux_apps ;;
             8) return ;;
             9) exit ;;
             *) echo "Invalid option!"; read -p "Press Enter to continue..." ;;
@@ -222,7 +222,7 @@ fix-pacman-db-and-keys() {
     read -p "Press Enter to continue..."
 }
 
-install_arcolinux_apps.sh() {
+install_arcolinux_apps() {
     clear
     echo "$ASCII_ART"
     echo "Installing ArchLinux TweakTool..."
@@ -254,7 +254,7 @@ kde_plasma() {
 xfce() {
     clear
     echo "$ASCII_ART"
-    echo "Installing Kde_Plasma..."
+    echo "Installing Xfce..."
     ./choose-desktop/xfce/install-xfce-and-sddm.sh
     read -p "Press Enter to continue..."
 }
@@ -262,7 +262,7 @@ xfce() {
 cinnamon() {
     clear
     echo "$ASCII_ART"
-    echo "Installing Kde_Plasma..."
+    echo "Installing Cinnamon..."
     ./choose-desktop/cinnamon/install_cinnamon.sh
     read -p "Press Enter to continue..."
 }
@@ -278,8 +278,8 @@ hyprland() {
 
 # Functions for Install Core Utils and Drivers
 
-# Function for cpu-microde-install
-cpu-microde-install() {
+# Function for cpu-microcode-install
+cpu-microcode-install() {
     clear
     echo "$ASCII_ART"
     echo "Installing Microcode..."

@@ -12,7 +12,6 @@ opendesktop-fonts \
 inter-font \
 ttf-opensans \
 terminus-font \
-inter-font \
 freetype2 \
 ttf-ms-fonts \
 ttf-mac-fonts \
