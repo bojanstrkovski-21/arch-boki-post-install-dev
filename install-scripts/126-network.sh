@@ -24,7 +24,6 @@ samba \
 smb4k \
 nfs-utils \
 nfsidmap \
-qemu-block-nfs \
 mkinitcpio-nfs-utils \
 libnfs \
 gvfs \
