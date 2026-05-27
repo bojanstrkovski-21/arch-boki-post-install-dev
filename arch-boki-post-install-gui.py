@@ -355,31 +355,23 @@ def _install_packages(pkgs: list[str]) -> None:
 # =============================================================================
 def _build_welcome_tab() -> None:
     with dpg.tab(label="   Welcome   "):
-        dpg.add_spacer(height=16)
-        dpg.add_text(
-            "      █████╗ ██████╗  ██████╗██╗  ██╗      ██████╗  ██████╗ ██╗  ██╗██╗",
-            color=AQUA,
-        )
-        dpg.add_text(
-            "     ██╔══██╗██╔══██╗██╔════╝██║  ██║      ██╔══██╗██╔═══██╗██║ ██╔╝██║",
-            color=AQUA,
-        )
-        dpg.add_text(
-            "     ███████║██████╔╝██║     ███████║█████╗██████╔╝██║   ██║█████╔╝ ██║",
-            color=GREEN,
-        )
-        dpg.add_text(
-            "     ██╔══██║██╔══██╗██║     ██╔══██║╚════╝██╔══██╗██║   ██║██╔═██╗ ██║",
-            color=GREEN,
-        )
-        dpg.add_text(
-            "     ██║  ██║██║  ██║╚██████╗██║  ██║      ██████╔╝╚██████╔╝██║  ██╗██║",
-            color=AQUA,
-        )
-        dpg.add_text(
-            "     ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝      ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝",
-            color=AQUA,
-        )
+        dpg.add_spacer(height=20)
+        _logo_data = [
+            ("      █████╗ ██████╗  ██████╗██╗  ██╗      ██████╗  ██████╗ ██╗  ██╗██╗", AQUA),
+            ("     ██╔══██╗██╔══██╗██╔════╝██║  ██║      ██╔══██╗██╔═══██╗██║ ██╔╝██║", AQUA),
+            ("     ███████║██████╔╝██║     ███████║█████╗██████╔╝██║   ██║█████╔╝ ██║", GREEN),
+            ("     ██╔══██║██╔══██╗██║     ██╔══██║╚════╝██╔══██╗██║   ██║██╔═██╗ ██║", GREEN),
+            ("     ██║  ██║██║  ██║╚██████╗██║  ██║      ██████╔╝╚██████╔╝██║  ██╗██║", AQUA),
+            ("     ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝      ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝", AQUA),
+        ]
+        _line_h = 12
+        _inner_w = 1076  # viewport 1100 - window padding 24
+        _max_chars = max(len(t) for t, _ in _logo_data)
+        _char_w = 7      # approx px per char at size 12 for MesloLGS NF
+        _cx = max(0, (_inner_w - _max_chars * _char_w) // 2)
+        with dpg.drawlist(width=_inner_w, height=_line_h * len(_logo_data)):
+            for i, (txt, col) in enumerate(_logo_data):
+                dpg.draw_text((_cx, i * _line_h), txt, color=col, size=12)
         dpg.add_spacer(height=20)
         dpg.add_separator()
         dpg.add_spacer(height=12)
@@ -401,8 +393,10 @@ def _build_welcome_tab() -> None:
         dpg.add_separator()
         dpg.add_spacer(height=8)
         dpg.add_text("  Requirements:", color=YELLOW)
-        dpg.add_text("    — sudo access is required for package installation", color=FG)
-        dpg.add_text("    — yay (AUR helper) is required for AUR packages", color=FG)
+        dpg.add_text("    — First add chaotic AUR repository and install aur helper 'yay'", color=FG)
+        dpg.add_text("    — Optional add arch-boki-repo or nemesis-repo", color=FG)
+        dpg.add_text("    — Sudo access is required for package installation", color=FG)
+        dpg.add_text("    — You'll be prompted for your password on the terminal window before installation begins", color=FG)
 
 
 # =============================================================================
@@ -867,9 +861,11 @@ def main() -> None:
 
         with dpg.tab_bar():
             _build_welcome_tab()
-            _build_apps_tab()
-            _build_core_tab()
             _build_maintenance_tab()
+            _build_core_tab()
+            _build_apps_tab()
+            
+            
 
     vp_w, vp_h = 1100, 720
     cx, cy = _screen_center(vp_w, vp_h)
