@@ -4,11 +4,9 @@ sudo pacman -S --noconfirm --needed pacutils
 
 
 sudo pacinstall --resolve-conflicts=all --no-confirm \
-pulseaudio-bluetooth \
 bluez \
 bluez-libs \
 bluez-utils \
-blueberry \
 blueman
 
 # sudo pacman -S --needed blueberry --noconfirm

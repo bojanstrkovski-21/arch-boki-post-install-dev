@@ -365,13 +365,24 @@ def _build_welcome_tab() -> None:
             ("     ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝      ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝", AQUA),
         ]
         _line_h = 12
-        _inner_w = 1076  # viewport 1100 - window padding 24
+        _logo_size = 96
+        _gap = 8
+        _has_logo = dpg.does_item_exist("logo_tex")
         _max_chars = max(len(t) for t, _ in _logo_data)
         _char_w = 7      # approx px per char at size 12 for MesloLGS NF
-        _cx = max(0, (_inner_w - _max_chars * _char_w) // 2)
-        with dpg.drawlist(width=_inner_w, height=_line_h * len(_logo_data)):
-            for i, (txt, col) in enumerate(_logo_data):
-                dpg.draw_text((_cx, i * _line_h), txt, color=col, size=12)
+        _art_text_w = _max_chars * _char_w
+        _art_h = _logo_size if _has_logo else _line_h * len(_logo_data)
+        _y_off = (_art_h - _line_h * len(_logo_data)) // 2
+        _total_w = ((_logo_size + _gap) if _has_logo else 0) + _art_text_w
+        _indent = max(0, (1076 - _total_w) // 2)
+        with dpg.group(horizontal=True):
+            dpg.add_spacer(width=_indent)
+            if _has_logo:
+                dpg.add_image("logo_tex", width=_logo_size, height=_logo_size)
+                dpg.add_spacer(width=_gap)
+            with dpg.drawlist(width=_art_text_w, height=_art_h):
+                for i, (txt, col) in enumerate(_logo_data):
+                    dpg.draw_text((0, _y_off + i * _line_h), txt, color=col, size=12)
         dpg.add_spacer(height=20)
         dpg.add_separator()
         dpg.add_spacer(height=12)
@@ -590,9 +601,6 @@ CORE_CATEGORIES = {
     "Fonts": {
         "_flat": True,
         "items": [
-            ("Nerd Fonts (MesloLGS)",   ["ttf-meslo-nerd"]),
-            ("JetBrains Mono NF",       ["ttf-jetbrains-mono-nerd"]),
-            ("Fira Code NF",            ["ttf-firacode-nerd"]),
             ("Noto fonts",              ["noto-fonts", "noto-fonts-emoji"]),
             ("Liberation fonts",        ["ttf-liberation"]),
         ],
@@ -717,6 +725,11 @@ MAINTENANCE_ACTIONS = [
         "cmd":     ["sudo", "pacman", "-Syyu", "--noconfirm"],
     },
     {
+        "label":   "Clean Pacman Cache",
+        "desc":    "Clean cached packages in /var/cache/pacman/pkg and ~/.cache/yay and ~/.cache/paru",
+        "cmd":     ["bash", str(BASE_DIR / "add-repos/clean-pacman-cache.sh")],
+    },
+    {
         "label":   "Add Arch-Boki Repos",
         "desc":    "Append arch-boki repository to pacman.conf",
         "cmd":     ["bash", str(BASE_DIR / "add-repos/append_archboki_repo.sh")],
@@ -732,13 +745,23 @@ MAINTENANCE_ACTIONS = [
         "cmd":     ["bash", str(BASE_DIR / "add-repos/install_and_append_chaotic_repo_and_keyrings.sh")],
     },
     {
-        "label":   "Fix Pacman DB & Keys",
-        "desc":    "Reset pacman databases, keyrings and trust",
+        "label":   "Fix Pacman keyrings and gnupg",
+        "desc":    "Fix pacman keyrings and gnupg",
         "cmd":     ["bash", str(BASE_DIR / "add-repos/fix-pacman-databases-and-keys.sh")],
     },
     {
+        "label":   "Remove Pacman Lock",
+        "desc":    "Remove /var/lib/pacman/db.lck if present",
+        "cmd":     ["bash", str(BASE_DIR / "add-repos/remove-pacman-lock-db-file.sh")],
+    },
+    {
+        "label":   "Set Parallel Downloads",
+        "desc":    "Set ParallelDownloads value in /etc/pacman.conf",
+        "cmd":     ["bash", str(BASE_DIR / "add-repos/set-pacman-parallel-downloads.sh")],
+    },
+    {
         "label":   "Install Archlinux-Tweak-Tool",
-        "desc":    "Requires Erik Dubois repo — installs tweak-tool + arcolinux-app + sofirem",
+        "desc":    "Requires Erik Dubois nemesis-repo to be added first",
         "cmd":     ["bash", str(BASE_DIR / "add-repos/install_arcolinux_apps.sh")],
     },
 ]
@@ -826,7 +849,7 @@ def _try_load_font() -> None:
         Path("/usr/share/fonts/TTF/MesloLGS NF Regular.ttf"),
         Path("/usr/share/fonts/TTF/MesloLGSNFRegular.ttf"),
         Path.home() / ".local/share/fonts/MesloLGS NF Regular.ttf",
-        Path("/usr/share/fonts/nerd-fonts-complete/Meslo/MesloLGS NF Regular.ttf"),
+        Path("/usr/share/fonts/nerd-fonts-complete/Meslo/1LGS NF Regular.ttf"),
     ]
     for search_dir in [Path("/usr/share/fonts"), Path.home() / ".local/share/fonts"]:
         if search_dir.exists() and not any(p.exists() for p in candidates):
@@ -852,6 +875,15 @@ def main() -> None:
     dpg.create_context()
     _apply_theme()
     _try_load_font()
+
+    with dpg.texture_registry():
+        _logo_path = BASE_DIR / "logo.png"
+        if _logo_path.exists():
+            try:
+                _lw, _lh, _, _ld = dpg.load_image(str(_logo_path))
+                dpg.add_static_texture(_lw, _lh, _ld, tag="logo_tex")
+            except Exception:
+                pass
 
     with dpg.window(tag="primary", no_title_bar=True, no_move=True,
                     no_resize=False, no_scrollbar=True):

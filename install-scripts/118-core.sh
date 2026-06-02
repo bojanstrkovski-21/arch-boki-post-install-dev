@@ -78,7 +78,4 @@ xdotool \
 yad \
 zenity \
 the_silver_searcher \
-the_platinum_searcher-bin \
-flatpak \
-octopi \
-octopi-notifier
+flatpak

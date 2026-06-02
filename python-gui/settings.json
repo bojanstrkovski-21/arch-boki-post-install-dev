@@ -1,0 +1,5 @@
+{
+  "terminal": "alacritty",
+  "aur_helper": "yay",
+  "pkg_manager": "yay"
+}
